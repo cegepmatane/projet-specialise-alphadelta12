@@ -24,28 +24,28 @@ let boostersPurchased = 0;
 
 // Toutes les cartes possibles du jeu
 const allCards = [
-    { id: 1, name: "Gin Blossoms", rarity: "common", icon: "🎸" },
-    { id: 2, name: "ZZ Top", rarity: "common", icon: "🎵" },
-    { id: 3, name: "The Cranberries", rarity: "common", icon: "🎼" },
-    { id: 4, name: "Billy Idol", rarity: "common", icon: "🔌" },
-    { id: 5, name: "Alice Cooper", rarity: "common", icon: "📻" },
-    { id: 6, name: "Boston", rarity: "common", icon: "🔧" },
+    { id: 1, name: "Gin Blossoms", rarity: "common", icon: "assets/GinBlossoms.jpg" },
+    { id: 2, name: "ZZ Top", rarity: "common", icon: "assets/ZZTOP.jpg" },
+    { id: 3, name: "The Cranberries", rarity: "common", icon: "assets/Cranberries.jpg" },
+    { id: 4, name: "Billy Idol", rarity: "common", icon: "assets/BillyIdol.jpg" },
+    { id: 5, name: "Alice Cooper", rarity: "common", icon: "assets/AliceCooper.jpg" },
+    { id: 6, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
     
-    { id: 7, name: "Nirvana", rarity: "rare", icon: "⚡" },
-    { id: 8, name: "U2", rarity: "rare", icon: "🔊" },
-    { id: 9, name: "Bryan Adams", rarity: "rare", icon: "🎛️" },
-    { id: 10, name: "Roxette", rarity: "rare", icon: "🎤" },
-    { id: 11, name: "Def Leppard", rarity: "rare", icon: "🎸" },
-    { id: 12, name: "KISS", rarity: "rare", icon: "🥁" },
+   { id: 7, name: "Nirvana", rarity: "rare", icon: "assets/nirvana.jpg" },
+   { id: 8, name: "U2", rarity: "rare", icon: "assets/U2.jpg" },
+   { id: 9, name: "Bryan Adams", rarity: "rare", icon: "assets/BryanAdams.jpg" },
+    { id: 10, name: "Roxette", rarity: "rare", icon: "assets/Roxette.jpg" },
+    { id: 11, name: "Def Leppard", rarity: "rare", icon: "assets/DefLeppard.jpg" },
+    { id: 12, name: "KISS", rarity: "rare", icon: "assets/kiss.jpg" },
     
-    { id: 13, name: "Bon Jovi", rarity: "epic", icon: "🎸" },
-    { id: 14, name: "Aerosmith", rarity: "epic", icon: "🎹" },
-    { id: 15, name: "Green Day", rarity: "epic", icon: "🎚️" },
-    { id: 16, name: "The Offspring", rarity: "epic", icon: "💿" },
+    { id: 13, name: "Bon Jovi", rarity: "epic", icon: "assets/Bonjovi.jpg" },
+    { id: 14, name: "Aerosmith", rarity: "epic", icon: "assets/aerosmith.jpg" },
+    { id: 15, name: "Green Day", rarity: "epic", icon: "assets/greenday.jpg" },
+    { id: 16, name: "The Offspring", rarity: "epic", icon: "assets/offspring.jpg" },
     
-    { id: 17, name: "The Beatles", rarity: "legendary", icon: "👑" },
-    { id: 18, name: "Metallica", rarity: "legendary", icon: "🏛️" },
-    { id: 19, name: "Elvis Presley", rarity: "legendary", icon: "💎" }
+    { id: 17, name: "The Beatles", rarity: "legendary", icon: "assets/Beatles.jpg" },
+    { id: 18, name: "Metallica", rarity: "legendary", icon: "assets/metallica.jpg" },
+    { id: 19, name: "Elvis Presley", rarity: "legendary", icon: "assets/Elvis.jpg" }
 ];
 
 // Données des améliorations
@@ -393,10 +393,10 @@ document.getElementById('openBooster').addEventListener('click', () => {
     // Générer 6 cartes aléatoires
     currentBoosterCards = [];
     const rarities = [
-        { name: 'common', weight: 50 },
+        { name: 'common', weight: 59 },
         { name: 'rare', weight: 30 },
-        { name: 'epic', weight: 15 },
-        { name: 'legendary', weight: 5 }
+        { name: 'epic', weight: 10 },
+        { name: 'legendary', weight: 1 }
     ];
     
     for (let i = 0; i < 6; i++) {
@@ -499,15 +499,31 @@ function displayCard(index) {
         cardContainer.addChild(newText);
     }
     
-    // Icône
-    const icon = new PIXI.Text(card.icon, {
-        fontSize: 60,
-        fill: 0xffffff
-    });
+    const texture = PIXI.Texture.from(card.icon);
+    const icon = new PIXI.Sprite(texture);
+
     icon.anchor.set(0.5);
     icon.y = -30;
+    icon.alpha = 0; // caché tant que pas prêt
+
     cardContainer.addChild(icon);
-    
+
+    const maxSize = 120;
+
+    // attendre que la texture soit chargée
+    if (texture.baseTexture.valid) {
+        const scale = Math.min(maxSize / icon.width, maxSize / icon.height);
+        icon.scale.set(scale);
+        icon.alpha = 1;
+    } else {
+        texture.baseTexture.on('loaded', () => {
+            const scale = Math.min(maxSize / icon.width, maxSize / icon.height);
+            icon.scale.set(scale);
+            icon.alpha = 1;
+        });
+    }
+
+
     // Nom
     const name = new PIXI.Text(card.name, {
         fontSize: 16,
@@ -705,7 +721,7 @@ function generateCollection() {
         
         if (owned > 0) {
             item.innerHTML = `
-                <div style="font-size: 32px;">${card.icon}</div>
+                <img src="${card.icon}" style="width:48px;height:48px;">
                 <div style="font-size: 10px; margin-top: 5px; font-weight: bold;">${card.name}</div>
                 <div style="font-size: 9px; color: #ffd700;">x${owned}</div>
             `;
