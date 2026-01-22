@@ -1,10 +1,10 @@
-* {
-    margin: 0;
+*{
+    margin:0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
+body, html{
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -12,24 +12,23 @@ body, html {
     background: #0a0e27;
     color: #fff;
     height: 100vh;
-    width: 100vw;
+    width: 100vh;
     touch-action: none;
 }
 
-/* ==== GAME CONTAINER ==== */
-#gameContainer {
+
+#containerClicker{
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 45%;
+    left:0;
+    top:0;
+    width:45%;
     height: 100%;
     background: radial-gradient(circle at center, #1a2045 0%, #0a0e27 100%);
     border-right: 3px solid #4a90ff;
-    box-shadow: 0 0 30px rgba(74, 144, 255, 0.5);
+    box-shadow: 0 0 30px rgba(74, 144, 255, 0,5);
 }
 
-/* Stats Overlay */
-#statsOverlay {
+#statJoueur{
     position: absolute;
     top: 10px;
     left: 10px;
@@ -40,33 +39,34 @@ body, html {
     z-index: 10;
 }
 
-.stat-item {
+.stat-item{
     background: linear-gradient(135deg, rgba(26, 32, 69, 0.9), rgba(42, 48, 85, 0.9));
     border: 2px solid #4a90ff;
     border-radius: 10px;
     padding: 8px 12px;
-    box-shadow: 0 0 20px rgba(74, 144, 255, 0.4);
+    box-shadow: 0 0 20px rgba(74, 144, 255, 0,4);
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     gap: 3px;
 }
 
-.stat-label {
+.stat-label{
     font-size: 10px;
     color: #8b9dc3;
     font-weight: 600;
 }
 
-.stat-value {
+
+.stat-valeur{
     font-size: 16px;
     color: #ffd700;
-    font-weight: bold;
+    font-weight: solid;
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
 }
 
-/* ==== SIDE PANEL ==== */
-#sidePanel {
+
+#panneauOption{
     position: absolute;
     left: 45%;
     top: 0;
@@ -77,21 +77,20 @@ body, html {
     overflow-x: hidden;
 }
 
-#sidePanel::-webkit-scrollbar {
+#panneauOption::-webkit-scrollbar {
     width: 8px;
 }
 
-#sidePanel::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0.3);
+#panneauOption::-webkit-scrollbar-track {
+   background: rgba(0,0,0,0.3);
 }
 
-#sidePanel::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #4a90ff, #8b5cf6);
-    border-radius: 5px;
+#panneauOption::-webkit-scrollbar-thumb {
+     background: linear-gradient(180deg, #4a90ff, #8b5cf6);
 }
 
-/* ==== TABS ==== */
-.tabs-container {
+
+.tabs-conteneur {
     display: flex;
     gap: 5px;
     padding: 10px 10px 5px 10px;
@@ -102,18 +101,20 @@ body, html {
     backdrop-filter: blur(10px);
 }
 
-.tab-btn {
+
+
+.tab-btn{
     flex: 1;
     padding: 10px 8px;
     font-size: 13px;
-    font-weight: bold;
     color: #8b9dc3;
     background: linear-gradient(135deg, #1a2555 0%, #2a3565 100%);
-    border: 2px solid #4a90ff;
+    botder: 2px solid #4a90ff;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 0 10px rgba(74, 144, 255, 0.3);
+
 }
 
 .tab-btn:hover {
@@ -128,16 +129,15 @@ body, html {
     box-shadow: 0 0 25px rgba(74, 144, 255, 0.8);
 }
 
-.tab-content {
+.tab-contenu{
     display: none;
     padding: 15px;
 }
 
-.tab-content.active {
+.tab-contenu.active {
     display: block;
 }
 
-/* ==== UPGRADES GRID ==== */
 .upgrades-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -265,7 +265,7 @@ body, html {
 }
 
 /* ==== PALIERS LIST ==== */
-.paliers-list {
+.paliers-liste {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -383,18 +383,19 @@ body, html {
     font-weight: bold;
 }
 
-.palier-status.unlocked {
+
+.palier-status.debloquer {
     background: rgba(74, 222, 128, 0.2);
     color: #4ade80;
 }
 
-/* ==== BOOSTER ==== */
+
 .booster-section {
     max-width: 700px;
     margin: 0 auto;
 }
 
-.section-title {
+.section-titre {
     font-size: 28px;
     font-weight: bold;
     text-align: center;
@@ -405,6 +406,39 @@ body, html {
     -webkit-text-fill-color: transparent;
     animation: gradient 3s ease infinite;
 }
+
+.upgrade-card.locked {
+    opacity: 0.35;
+    filter: grayscale(1);
+    pointer-events: none;
+}
+
+
+
+.palier-card.palier-obtenu {
+  background: linear-gradient(135deg, #1faa59, #157a43);
+  border: 2px solid #2cff9a;
+  color: white;
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.6);
+
+}
+
+.palier-card.palier-obtenu .benefit-tag {
+  background: rgba(255,255,255,0.15);
+  color: #eafff3;
+}
+
+.palier-card.palier-obtenu .palier-name {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.palier-status.unlocked {
+  color: #eafff3;
+  font-weight: bold;
+}
+
+
 
 @keyframes gradient {
     0%, 100% { background-position: 0% center; }
@@ -447,12 +481,13 @@ body, html {
     animation: bounce 1s ease infinite;
 }
 
+
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
 }
 
-.btn-cost {
+.btn-prix {
     background: rgba(0, 0, 0, 0.3);
     padding: 4px 12px;
     border-radius: 15px;
@@ -475,70 +510,8 @@ body, html {
     text-align: center;
 }
 
-.collection-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
 
-.collection-item {
-    aspect-ratio: 1;
-    border-radius: 10px;
-    border: 3px solid;
-    background: linear-gradient(135deg, #1a2555, #2a3565);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    color: #8b9dc3;
-    opacity: 0.4;
-    transition: all 0.3s ease;
-    padding: 6px;
-    text-align: center;
-}
 
-.collection-item.owned {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.collection-item.owned:hover {
-    transform: scale(1.05);
-}
-
-.collection-item.common {
-    border-color: #4a5568;
-}
-
-.collection-item.common.owned {
-    box-shadow: 0 0 12px rgba(74, 85, 104, 0.8);
-}
-
-.collection-item.rare {
-    border-color: #4a90ff;
-}
-
-.collection-item.rare.owned {
-    box-shadow: 0 0 15px rgba(74, 144, 255, 1);
-}
-
-.collection-item.epic {
-    border-color: #a78bfa;
-}
-
-.collection-item.epic.owned {
-    box-shadow: 0 0 20px rgba(167, 139, 250, 1);
-}
-
-.collection-item.legendary {
-    border-color: #fbbf24;
-}
-
-.collection-item.legendary.owned {
-    box-shadow: 0 0 25px rgba(251, 191, 36, 1);
-    animation: legendary-pulse 2s ease-in-out infinite;
-}
 
 @keyframes legendary-pulse {
     0%, 100% {
@@ -586,11 +559,11 @@ body, html {
 
 /* ==== RESPONSIVE ==== */
 @media (max-width: 1024px) {
-    #gameContainer {
+    #containerClicker {
         width: 40%;
     }
     
-    #sidePanel {
+    #panneauOption {
         left: 40%;
         width: 60%;
     }
@@ -605,21 +578,21 @@ body, html {
 }
 
 @media (max-width: 768px) {
-    #gameContainer {
+    #containerClicker {
         width: 100%;
         height: 50%;
         border-right: none;
         border-bottom: 3px solid #4a90ff;
     }
     
-    #sidePanel {
+    #panneauOption {
         left: 0;
         top: 50%;
         width: 100%;
         height: 50%;
     }
     
-    #statsOverlay {
+    #statJoueur {
         grid-template-columns: repeat(4, 1fr);
         gap: 5px;
         top: 5px;
@@ -639,7 +612,7 @@ body, html {
         font-size: 14px;
     }
     
-    .tabs-container {
+    .tabs-conteneur {
         padding: 8px 8px 4px 8px;
         gap: 4px;
     }
@@ -649,7 +622,7 @@ body, html {
         font-size: 11px;
     }
     
-    .tab-content {
+    .tab-contenu{
         padding: 10px;
     }
     
@@ -659,11 +632,12 @@ body, html {
     }
     
     .collection-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 10px;
+        justify-items: center;
     }
     
-    .section-title {
+    .section-titre {
         font-size: 24px;
     }
     
@@ -755,7 +729,7 @@ body, html {
     margin: 0 auto;
 }
 
-.section-title {
+.section-titre {
     font-size: 32px;
     font-weight: bold;
     text-align: center;
@@ -812,7 +786,7 @@ body, html {
     50% { transform: translateY(-5px); }
 }
 
-.btn-cost {
+.btn-prix {
     background: rgba(0, 0, 0, 0.3);
     padding: 5px 15px;
     border-radius: 20px;
@@ -866,28 +840,28 @@ body, html {
     transform: scale(1.05) rotate(2deg);
 }
 
-.card.common {
+.carte.common {
     background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
     border-color: #4a5568;
     box-shadow: 0 0 25px rgba(74, 85, 104, 0.8);
     color: #a0aec0;
 }
 
-.card.rare {
+.carte.rare {
     background: linear-gradient(135deg, #3b5998 0%, #2d4373 100%);
     border-color: #4a90ff;
     box-shadow: 0 0 30px rgba(74, 144, 255, 1);
     color: #4a90ff;
 }
 
-.card.epic {
+.carte.epic {
     background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
     border-color: #a78bfa;
     box-shadow: 0 0 35px rgba(167, 139, 250, 1);
     color: #c4b5fd;
 }
 
-.card.legendary {
+.carte.legendaire {
     background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
     border-color: #fbbf24;
     box-shadow: 0 0 40px rgba(251, 191, 36, 1);
@@ -895,7 +869,7 @@ body, html {
 }
 
 /* Collection */
-.collection-section {
+.section-collection {
     margin-top: 40px;
     padding-top: 30px;
     border-top: 2px solid rgba(74, 144, 255, 0.3);
@@ -911,33 +885,35 @@ body, html {
 
 .collection-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 10px;
+    justify-items: center;
 }
 
 .collection-item {
-    aspect-ratio: 1;
+    aspect-ratio: 2 / 3;
+    width: 100%;
+    max-width: 120px;
     border-radius: 12px;
     border: 3px solid;
     background: linear-gradient(135deg, #1a2555, #2a3565);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     font-size: 11px;
     color: #8b9dc3;
-    opacity: 0.4;
+    opacity: 0.35;
     transition: all 0.3s ease;
-    padding: 8px;
+    padding: 8px 6px;
     text-align: center;
 }
-
-.collection-item.owned {
+.collection-item.obtenu {
     opacity: 1;
-    transform: scale(1);
+    /* transform: scale(1); */
 }
 
-.collection-item.owned:hover {
+.collection-item.obtenu:hover {
     transform: scale(1.05);
 }
 
@@ -945,15 +921,15 @@ body, html {
     border-color: #4a5568;
 }
 
-.collection-item.common.owned {
-    box-shadow: 0 0 15px rgba(74, 85, 104, 0.8);
+.collection-item.common.obtenu {
+    box-shadow: 0 0 20px rgba(74, 85, 104, 0.8);
 }
 
 .collection-item.rare {
     border-color: #4a90ff;
 }
 
-.collection-item.rare.owned {
+.collection-item.rare.obtenu {
     box-shadow: 0 0 20px rgba(74, 144, 255, 1);
 }
 
@@ -961,18 +937,62 @@ body, html {
     border-color: #a78bfa;
 }
 
-.collection-item.epic.owned {
+.collection-item.epic.obtenu {
     box-shadow: 0 0 25px rgba(167, 139, 250, 1);
 }
 
-.collection-item.legendary {
+.collection-item.legendaire {
     border-color: #fbbf24;
 }
 
-.collection-item.legendary.owned {
+.collection-item.legendaire.obtenu {
     box-shadow: 0 0 30px rgba(251, 191, 36, 1);
     animation: legendary-pulse 2s ease-in-out infinite;
 }
+
+
+/* ===== FIX COLLECTION SIZE ===== */
+
+.collection-icon-wrapper {
+    width: 100%;
+    flex: 1;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.collection-icon-wrapper.locked {
+    font-size: 28px;
+    color: #8b9dc3;
+}
+
+.collection-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.collection-name {
+    font-size: 11px;
+    line-height: 1.2;
+    margin-top: 4px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* compteur */
+.collection-count {
+    font-size: 10px;
+    color: #ffd700;
+    margin-top: 2px;
+}
+
 
 @keyframes legendary-pulse {
     0%, 100% {
