@@ -1,0 +1,97 @@
+{
+  "waves": [
+    {
+      "searches": [
+        "2d engine js"
+      ],
+      "urls": [
+        "https://pixijs.com/",
+        "https://github.com/collections/javascript-game-engines"
+      ],
+      "keywords": [
+        {
+          "term": "WebGL.",
+          "type": "tool",
+          "description": ""
+        },
+        {
+          "term": "Free",
+          "type": "community",
+          "description": "Ces un moteur 2d JS 100% gratuit"
+        },
+        {
+          "term": "phaser",
+          "type": "tool",
+          "description": ""
+        },
+        {
+          "term": "melonJS",
+          "type": "tool",
+          "description": ""
+        },
+        {
+          "term": "kiwi.js",
+          "type": "tool",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "searches": [
+        "WebGL"
+      ],
+      "urls": [
+        "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API",
+        "https://get.webgl.org/"
+      ],
+      "keywords": [
+        {
+          "term": "JavaScript API",
+          "type": "tech",
+          "description": ""
+        },
+        {
+          "term": "WebGLRenderingContext",
+          "type": "tool",
+          "description": ""
+        },
+        {
+          "term": "OpenGL ES",
+          "type": "tech",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "searches": [
+        "JavaScript APIs"
+      ],
+      "urls": [
+        "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API",
+        "https://www.capterra.com/sem-compare/integration-software/?utm_source=ps-google&utm_medium=ppc&utm_campaign=:1:CAP:2:COM:3:All:4:INTL:5:BAU:6:SOF:7:Desktop:8:BR:9:Integration&network=g&gclid=CjwKCAiAssfLBhBDEiwAcLpwflLpjGRAZzG-_UESnBSrBUc94wZIz_wqKlaL2iZppFnECkqDsFG2HRoC7ZAQAvD_BwE"
+      ],
+      "keywords": [
+        {
+          "term": "Promise",
+          "type": "tool",
+          "description": ""
+        },
+        {
+          "term": "bookmarks",
+          "type": "tool",
+          "description": ""
+        },
+        {
+          "term": "OAuth2",
+          "type": "tech",
+          "description": ""
+        },
+        {
+          "term": "Tonkean",
+          "type": "tool",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}
