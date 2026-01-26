@@ -11,6 +11,20 @@ $user_id = $_SESSION['user_id'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Clicker</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .booster-rarete-bs {
+            text-align: center;
+            font-size: 14px !important;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .booster-common   { color: #9ca3af !important; }
+        .booster-rare     { color: #4a90ff !important; } 
+        .booster-epic     { color: #a78bfa !important; }
+        .booster-legendary{ color: #fbbf24 !important; } 
+</style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.7/browser/pixi.min.js"></script>
 
 </head>
@@ -61,7 +75,14 @@ $user_id = $_SESSION['user_id'];
         <div class="tab-contenu" id="booster-tab">
             <div class="booster-section">
                 <h2 class="section-titre">Pack d'artistes</h2>
-                <p class="booster-description">Obtient 5 cartes d'artistes aléatoires!</p>
+                <p class="booster-description">Obtient 6 cartes d'artistes aléatoires!</p>
+                    <h3 class="booster-rarete-bs booster-common">Commun: 65%</h3>
+                    <h3 class="booster-rarete-bs booster-rare">Rare: 35%</h3>
+                    <h3 class="booster-rarete-bs booster-epic">Epique: 5%</h3>
+                    <h3 class="booster-rarete-bs booster-legendary">Légendaire: 1%</h3>
+
+
+                    
                 <button id="ouvrirBooster" class="booster-btn">
                     <!-- <span class="btn-icon"></span> -->
                      <span class="btn-texte">Ouvrir un Booster</span>
@@ -69,7 +90,7 @@ $user_id = $_SESSION['user_id'];
                 </button>
 
                 <div class="section-collection">
-                    <h3 class="collection-titre">Ma Collection</h3>
+                    <h3 class="booster-description">Ma Collection</h3>
                     <div id="collectionDisplay" class="collection-grid">
 
                         <!-- Fait En JS -->
@@ -78,7 +99,9 @@ $user_id = $_SESSION['user_id'];
             </div>
         </div>
     </div>
-
+    
+    
+  
 
     <div id="notifications"></div>
 

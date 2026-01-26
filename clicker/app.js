@@ -44,41 +44,41 @@ const lesCartes = [
     { id: 13, name: "Simon & Garfunkel", rarity: "common", icon: "assets/SimonGarfunkel.jpg" },
     { id: 14, name: "Twisted Sister", rarity: "common", icon: "assets/TwistedSister.jpg" },
     { id: 15, name: "System Of A Down", rarity: "common", icon: "assets/SystemOfDown.jpg" },
-    { id: 16, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 17, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 18, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 19, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 20, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 21, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 22, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 23, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 24, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 25, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 26, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 27, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 28, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 29, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 30, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 31, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 32, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 33, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 34, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 35, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 36, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 37, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 38, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 39, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 40, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 41, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 42, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 43, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 44, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 45, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 46, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 47, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 48, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 49, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
-    { id: 50, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
+    { id: 16, name: "ABBA", rarity: "common", icon: "assets/abba.jpg" },
+    { id: 17, name: "Black Sabbath", rarity: "common", icon: "assets/blacksabbath.jpg" },
+    { id: 18, name: "Britney Spears", rarity: "common", icon: "assets/britneyspears.jpg" },
+    { id: 19, name: "Bruce Springsteen", rarity: "common", icon: "assets/brucspringsteen.jpg" },
+    { id: 20, name: "BTS", rarity: "common", icon: "assets/bts.jpg" },
+    { id: 21, name: "Chuck Berry", rarity: "common", icon: "assets/chuckberry.png" },
+    { id: 22, name: "David Bowie", rarity: "common", icon: "assets/davidbowie.jpg" },
+    { id: 23, name: "Dire Straits", rarity: "common", icon: "assets/direstrait.jpg" },
+    { id: 24, name: "Iron Maiden", rarity: "common", icon: "assets/ironmaiden.jpg" },
+    { id: 25, name: "The Kinks", rarity: "common", icon: "assets/kinks.jpg" },
+    { id: 26, name: "Lady Gaga", rarity: "common", icon: "assets/ladygaga.jpg" },
+    { id: 27, name: "My Chemical Romances", rarity: "common", icon: "assets/mychemicalromance.jpg" },
+    { id: 28, name: "Megadeth", rarity: "common", icon: "assets/megadeth.jpg" },
+    { id: 29, name: "Mariah Carey", rarity: "common", icon: "assets/mariahcarey.jpg" },
+    { id: 30, name: "Mötley Crue", rarity: "common", icon: "assets/motleycrue.jpg" },
+    { id: 31, name: "P!nk", rarity: "common", icon: "assets/p!nk.jpg" },
+    { id: 32, name: "Pantera", rarity: "common", icon: "assets/pantera.jpg" },
+    { id: 33, name: "Pearl Jam", rarity: "common", icon: "assets/pearljam.jpg" },
+    { id: 34, name: "Phil Collins", rarity: "common", icon: "assets/philcollins.jpg" },
+    { id: 35, name: "Shakira", rarity: "common", icon: "assets/shakira.jpg" },
+    { id: 36, name: "Slipknot", rarity: "common", icon: "assets/slipknot.jpg" },
+    { id: 37, name: "Sum41", rarity: "common", icon: "assets/sum41.jpg" },
+    { id: 38, name: "Survivor", rarity: "common", icon: "assets/survivor.jpg" },
+    { id: 39, name: "TALK", rarity: "common", icon: "assets/talk.jpg" },
+    { id: 40, name: "The Killers", rarity: "common", icon: "assets/thekillers.jpg" },
+    { id: 41, name: "The Who", rarity: "common", icon: "assets/thewho.jpg" },
+    { id: 42, name: "Toto", rarity: "common", icon: "assets/toto.jpg" },
+    { id: 43, name: "Van Halen", rarity: "common", icon: "assets/Boston.jpg" },
+  //  { id: 44, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
+   // { id: 45, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
+   // { id: 46, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
+   // { id: 47, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
+   // { id: 48, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
+   // { id: 49, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
+   // { id: 50, name: "Boston", rarity: "common", icon: "assets/Boston.jpg" },
 
     //RARE
     { id: 51, name: "Nirvana", rarity: "rare", icon: "assets/nirvana.jpg" },
@@ -135,6 +135,8 @@ const lesCartes = [
 ];
 
 
+
+
 function initialiserCollection() {
     collection = {};
     lesCartes.forEach(carte => {
@@ -169,29 +171,30 @@ const RARETE_DES_CARTES = {
 
 
 const donneeAmeliorations =[
-    { id: 1, name: "Nouveau Riff", prix: 15, points: 1, bonus: "+20% coins pendant 2min" },
-    { id: 2, name: "Seance de répétition", prix: 50, points: 2, bonus: "+5% cartes rares x3" },
-    { id: 3, name: "Nouvelle Composition", prix: 150, points: 3, bonus: null },
-    { id: 4, name: "Soiree Découverte", prix: 400, points: 5, bonus: "10% doubler pts/clic" },
+    { id: 1, name: "Nouveau Riff", prix: 10, points: 1, bonus: "+20% coins pendant 2min" },
+    { id: 2, name: "Seance de répétition", prix: 75, points: 2, bonus: "+5% cartes rares x3" },
+    { id: 3, name: "Nouvelle Composition", prix: 200, points: 3, bonus: null },
+    { id: 4, name: "Soiree Découverte", prix: 500, points: 5, bonus: "10% doubler pts/clic" },
     { id: 5, name: "Amélioration du matériel", prix: 800, points: 8, bonus: "+15% coins pendant 2min" },
     { id: 6, name: "Pollisage du style", prix: 1500, points: 12, bonus: null },
     { id: 7, name: "Enregistrement d'un nouveau titre",  prix: 3000, points: 18, bonus: "+20% coins pendant 5min" },
-    { id: 8, name: "Tournage d'un Clip", prix: 5000, points: 25, bonus: null },
-    { id: 9, name: "Tournée régional", prix: 8000, points: 40, bonus: "x2 pts/clic pendant 30s" },
-    { id: 10, name: "Sortir un nouvelle Album", prix: 12000, points: 60, bonus: "Carte exclusive" },
-    { id: 11, name: "Bonus tracks", prix: 12000, points: 60, bonus: "Carte exclusive" },
-    { id: 12, name: "Remaster d'ancien titre", prix: 12000, points: 60, bonus: "Carte exclusive" },
-    { id: 13, name: "Collaboration pour un titre", prix: 12000, points: 60, bonus: "Carte exclusive" },
-    { id: 14, name: "Tournée internationale", prix: 12000, points: 60, bonus: "Carte exclusive" }
+    { id: 8, name: "Tournage d'un Clip", prix: 7500, points: 25, bonus: null },
+    { id: 9, name: "Tournée régional", prix: 10000, points: 40, bonus: "x2 pts/clic pendant 30s" },
+    { id: 10, name: "Sortir un nouvelle Album", prix: 15000, points: 60, bonus: "Carte exclusive" },
+    { id: 11, name: "Bonus tracks", prix: 20000, points: 80, bonus: "Carte exclusive" },
+    { id: 12, name: "Remaster d'ancien titre", prix: 25000, points: 100, bonus: "Carte exclusive" },
+    { id: 13, name: "Collaboration pour un titre", prix: 32000, points: 120, bonus: "Carte exclusive" },
+    { id: 14, name: "Tournée internationale", prix: 40000, points: 150, bonus: "Carte exclusive" }
 ];
 
 const donneePalier = [
-    { id: 1, name: "Garage Band", prix: 500, ptsAutoParSec: 1, description: "Débute ton aventure musicale", exclusive: true },
-    { id: 2, name: "Premier concert", prix: 1500, ptsAutoParSec: 3, description: "Joue devant un petit public" },
-    { id: 3, name: "Radio Locale", prix: 3000, ptsAutoParSec: 5, description: "Diffuse ta musique localement" },
-    { id: 4, name: "Tournée régionale", prix: 6000, ptsAutoParSec: 10, description: "Voyage et performe", exclusive: true },
-    { id: 5, name: "Concert en Stade", prix: 10000, ptsAutoParSec: 15, description: "Des milliers de fans" },
-    { id: 6, name: "Hall Of Fame", prix: 15000, ptsAutoParSec: 20, description: "Légende de la musique", exclusive: true }
+    { id: 1, name: "Garage Band", prix: 500, ptsAutoParSec: 10, description: "Débute ton aventure musicale", exclusive: true },
+    { id: 2, name: "Premier concert", prix: 1500, ptsAutoParSec: 30, description: "Joue devant un petit public" },
+    { id: 3, name: "Radio Locale", prix: 3000, ptsAutoParSec: 50, description: "Diffuse ta musique localement" },
+    { id: 4, name: "Ma Premiere Tournée", prix: 6000, ptsAutoParSec: 100, description: "Voyage et performe", exclusive: true },
+    { id: 5, name: "Propulsion au sommet", prix: 10000, ptsAutoParSec: 100, description: "Voyage et performe", exclusive: true },
+    { id: 6, name: "Concert en Stade", prix: 15000, ptsAutoParSec: 150, description: "Des milliers de fans" },
+    { id: 7, name: "Hall Of Fame", prix: 20000, ptsAutoParSec: 200, description: "Légende de la musique", exclusive: true }
 ];
 
 const DISQUES_PAR_PALIER = {
@@ -201,8 +204,22 @@ const DISQUES_PAR_PALIER = {
   3: "assets/disc4.png", 
   4: "assets/disc5.png",
   5: "assets/disc6.png",
-  6: "assets/disc7.png"
+  6: "assets/disc8.png",
+  7: "assets/disc7.png"
 };
+
+
+const STYLE_DISQUE_PAR_PALIER = {
+  0: { cercle: 0x1a2045, rayon: 0x4a90ff, bandes: 0 },
+  1: { cercle: 0x2b4fa3, rayon: 0x6aa8ff, bandes: 2 },
+  2: { cercle: 0x4f7ddf, rayon: 0x9ec5ff, bandes: 3 }, 
+  3: { cercle: 0xcfd8dc, rayon: 0xffffff, bandes: 4 }, 
+  4: { cercle: 0xfacc15, rayon: 0xffe066, bandes: 5 }, 
+  5: { cercle: 0xe5e7eb, rayon: 0xd1d5db, bandes: 6 }, 
+  6: { cercle: 0xb9f2ff, rayon: 0xe0fbff, bandes: 7 }, // diamant
+  7: { cercle: 0x10b981, rayon: 0x6ee7b7, bandes: 9 }  // émeraude
+};
+
 
 
 // Creation Fond du clicker animé avec PiXiJS
@@ -218,12 +235,19 @@ app.stage.addChild(graphique);
 
 
 
-
 const cercleMilieu = new PIXI.Graphics();
-cercleMilieu.beginFill(0x1a2045, 0.6);
-cercleMilieu.drawCircle(centreX, centreY, 220);
-cercleMilieu.endFill();
 app.stage.addChild(cercleMilieu);
+
+function dessinerCercleMilieu(couleur) {
+  cercleMilieu.clear();
+  cercleMilieu.beginFill(couleur, 0.6);
+  cercleMilieu.drawCircle(centreX, centreY, 220);
+  cercleMilieu.endFill();
+}
+
+// init
+dessinerCercleMilieu(STYLE_DISQUE_PAR_PALIER[0].cercle);
+
 
 
 
@@ -232,23 +256,62 @@ conteneurRayon.x = centreX;
 conteneurRayon.y = centreY;
 app.stage.addChild(conteneurRayon);
 
+let rayonsActuels = [];
 
-for (let i = 0; i < 30; i++) {
+function genererRayons(couleur, nbRayons = 30) {
+  conteneurRayon.removeChildren();
+  rayonsActuels = [];
+
+  for (let i = 0; i < nbRayons; i++) {
     const rayon = new PIXI.Graphics();
-    const opacite = 0.2 + Math.random() * 0.2;
-    rayon.beginFill(0x4a90ff, opacite);
+    const opacite = 0.15 + Math.random() * 0.25;
+
+    rayon.beginFill(couleur, opacite);
     rayon.moveTo(0, 0);
-    rayon.lineTo( 0, -350);
-    rayon.lineTo( 10, -300);
-    rayon.lineTo( 0, 0);
+    rayon.lineTo(0, -350);
+    rayon.lineTo(10, -300);
+    rayon.lineTo(0, 0);
     rayon.endFill();
-    rayon.rotation = (i * Math.PI * 2) / 30;
+
+    rayon.rotation = (i * Math.PI * 2) / nbRayons;
     conteneurRayon.addChild(rayon);
+    rayonsActuels.push(rayon);
+  }
 }
+
+
+genererRayons(STYLE_DISQUE_PAR_PALIER[0].rayon, 30);
+
+
 
 app.ticker.add((delta) => {
     conteneurRayon.rotation += 0.003 * delta;
 });
+
+const conteneurBandes = new PIXI.Container();
+conteneurBandes.x = centreX;
+conteneurBandes.y = centreY;
+app.stage.addChild(conteneurBandes);
+
+
+
+let bandesActuelles = [];
+
+function genererBandes(nbBandes, couleur) {
+  conteneurBandes.removeChildren();
+  bandesActuelles = [];
+
+  for (let i = 0; i < nbBandes; i++) {
+    const bande = new PIXI.Graphics();
+    bande.beginFill(couleur, 0.35);
+    bande.drawRoundedRect(-6, -260, 12, 80, 6);
+    bande.endFill();
+
+    bande.rotation = (i * Math.PI * 2) / nbBandes;
+    conteneurBandes.addChild(bande);
+    bandesActuelles.push(bande);
+  }
+}
 
 
 
@@ -360,6 +423,29 @@ function mettreAJourDisqueSelonPalier() {
     changerDisque(nouvelleImage);
   }
 }
+
+
+function appliquerStyleDisqueSelonPalier() {
+  let plusHautPalier = 0;
+
+  Object.keys(paliersDebloquer).forEach(id => {
+    if (paliersDebloquer[id]) {
+      const palierId = Number(id);
+      if (palierId > plusHautPalier) {
+        plusHautPalier = palierId;
+      }
+    }
+  });
+
+  const style =
+    STYLE_DISQUE_PAR_PALIER[plusHautPalier] ||
+    STYLE_DISQUE_PAR_PALIER[0];
+
+  dessinerCercleMilieu(style.cercle);
+  genererRayons(style.rayon, 30 + style.bandes * 3);
+  genererBandes(style.bandes, style.rayon);
+}
+
 
 
 function changerDisque(cheminImage) {
@@ -589,6 +675,7 @@ function acheterPalier(id) {
     paliersDebloquer[id] = true;
 
     mettreAJourDisqueSelonPalier();
+    appliquerStyleDisqueSelonPalier();
 
     niveau = palier.name;
     updateDesStats();
@@ -690,13 +777,13 @@ document.getElementById('ouvrirBooster').addEventListener('click', () => {
 
     boosterActuelCarte = [];
     const rareter = [
-        {name: 'common', weight: 70},
-        {name: 'rare', weight: 25},
-        {name: 'epic', weight: 4.5},
-        {name: 'legendaire', weight: 0.5}
+        {name: 'common', weight: 65},
+        {name: 'rare', weight: 29},
+        {name: 'epic', weight: 5},
+        {name: 'legendaire', weight: 1}
     ];
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
         const rarity = getRandomRareter(rareter);
         const carteDeRareter = lesCartes.filter(c => c.rarity === rarity);
 
@@ -878,7 +965,7 @@ function displayCarte(index) {
     boosterConteneur.addChild(compteur);
     
 
-    const instruction = new PIXI.Text(index < 5 ? 'Cliquez pour continuer' : 'Cliquez pour terminer', {
+    const instruction = new PIXI.Text(index < 6 ? 'Cliquez pour continuer' : 'Cliquez pour terminer', {
         fontSize: 18,
         fill: 0xffd700,
         fontWeight: 'bold'
@@ -1099,6 +1186,7 @@ Object.keys(paliersDebloquer).forEach(id => {
     marquerPalierCommeObtenu(Number(id));
   }
 });
+appliquerStyleDisqueSelonPalier();
 
 genererCollection();
 updateBoosterBouton();
