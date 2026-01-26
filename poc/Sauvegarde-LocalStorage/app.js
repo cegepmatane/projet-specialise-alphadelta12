@@ -1,7 +1,3 @@
-// ========================
-// CONFIGURATION ET DONNÉES
-// ========================
-
 const CONFIG = {
     STORAGE_KEY: 'collectibleCardsData',
     COLLECTION_KEY: 'obtainedCardsCollection',
@@ -10,7 +6,6 @@ const CONFIG = {
     CARD_IMAGE_PATH: 'assets/screenshot.png'
 };
 
-// Jeu de données initial - 20 cartes
 const initialCardsData = [
     { id: 1, name: "Dragon de Feu", rarity: "Légendaire", color: 0xFF4444 },
     { id: 2, name: "Phénix Sacré", rarity: "Légendaire", color: 0xFF8844 },
@@ -34,129 +29,69 @@ const initialCardsData = [
     { id: 20, name: "Thunderbird", rarity: "Légendaire", color: 0xFFD700 }
 ];
 
-// ========================
-// GESTION DU LOCALSTORAGE
-// ========================
-
 const StorageManager = {
+    currentCollection: [],
+
     initialize() {
-        // Initialiser les données des cartes
-        const existingData = localStorage.getItem(CONFIG.STORAGE_KEY);
-        if (!existingData) {
-            this.saveAll();
-            console.log('✅ Données initiales sauvegardées');
-        }
-        
-        // Initialiser la collection (cartes obtenues)
-        const existingCollection = localStorage.getItem(CONFIG.COLLECTION_KEY);
-        if (!existingCollection) {
-            localStorage.setItem(CONFIG.COLLECTION_KEY, JSON.stringify([]));
-            console.log('✅ Collection initialisée');
-        }
-    },
-
-    loadAll() {
-        const data = localStorage.getItem(CONFIG.STORAGE_KEY);
-        if (data) {
+        const savedCollection = localStorage.getItem(CONFIG.COLLECTION_KEY);
+        if (savedCollection) {
             try {
-                return JSON.parse(data);
+                this.currentCollection = JSON.parse(savedCollection);
             } catch (error) {
-                console.error('❌ Erreur lors du parsing des données:', error);
-                return null;
+                this.currentCollection = [];
             }
-        }
-        return null;
-    },
-
-    saveAll() {
-        const dataToSave = {
-            cards: initialCardsData,
-            lastSaved: new Date().toISOString(),
-            totalCards: CONFIG.TOTAL_CARDS
-        };
-        
-        try {
-            localStorage.setItem(CONFIG.STORAGE_KEY, JSON.stringify(dataToSave));
-            console.log('💾 Données sauvegardées!');
-            
-            alert(
-                '✅ Données sauvegardées avec succès!\n\n' + 
-                `📅 Date: ${new Date().toLocaleString('fr-FR')}\n` +
-                `📊 Total: ${CONFIG.TOTAL_CARDS} cartes\n` +
-                `🎴 Obtenues: ${this.getObtainedCards().length} cartes`
-            );
-        } catch (error) {
-            console.error('❌ Erreur lors de la sauvegarde:', error);
-            alert('❌ Erreur lors de la sauvegarde!');
+        } else {
+            this.currentCollection = [];
         }
     },
 
     getObtainedCards() {
-        const collection = localStorage.getItem(CONFIG.COLLECTION_KEY);
-        if (collection) {
-            try {
-                return JSON.parse(collection);
-            } catch (error) {
-                console.error('❌ Erreur lors du parsing de la collection:', error);
-                return [];
-            }
-        }
-        return [];
+        return this.currentCollection;
     },
 
     addObtainedCards(cardIds) {
-        const obtainedCards = this.getObtainedCards();
-        const updatedCards = [...new Set([...obtainedCards, ...cardIds])]; // Éviter les doublons
-        
+        this.currentCollection = [...new Set([...this.currentCollection, ...cardIds])];
+        return this.currentCollection;
+    },
+
+    saveToLocalStorage() {
         try {
-            localStorage.setItem(CONFIG.COLLECTION_KEY, JSON.stringify(updatedCards));
-            console.log(`✅ ${cardIds.length} cartes ajoutées à la collection`);
-            return updatedCards;
+            localStorage.setItem(CONFIG.COLLECTION_KEY, JSON.stringify(this.currentCollection));
+            alert('Données sauvegardées avec succès!\n\nCartes obtenues: ' + this.currentCollection.length + '/20');
         } catch (error) {
-            console.error('❌ Erreur lors de l\'ajout à la collection:', error);
-            return obtainedCards;
+            alert('Erreur lors de la sauvegarde!');
         }
     },
 
     resetCollection() {
-        if (confirm('⚠️ Êtes-vous sûr de vouloir réinitialiser votre collection ?')) {
-            localStorage.setItem(CONFIG.COLLECTION_KEY, JSON.stringify([]));
-            console.log('🔄 Collection réinitialisée');
-            alert('✅ Collection réinitialisée!');
+        if (confirm('Êtes-vous sûr de vouloir réinitialiser votre collection ?')) {
+            this.currentCollection = [];
+            localStorage.removeItem(CONFIG.COLLECTION_KEY);
+            alert('Collection réinitialisée!');
             return true;
         }
         return false;
     },
 
     getRandomCards(count) {
-        const savedData = this.loadAll();
-        const cardsPool = savedData ? savedData.cards : initialCardsData;
-        
-        const shuffled = [...cardsPool].sort(() => Math.random() - 0.5);
+        const shuffled = [...initialCardsData].sort(() => Math.random() - 0.5);
         return shuffled.slice(0, count);
     }
 };
-
-// ========================
-// GESTION DE LA COLLECTION UI
-// ========================
 
 const CollectionManager = {
     updateCollectionDisplay() {
         const collectionGrid = document.getElementById('collectionGrid');
         const obtainedCards = StorageManager.getObtainedCards();
         
-        // Vider la grille
         collectionGrid.innerHTML = '';
         
-        // Créer une carte pour chaque carte du jeu
         initialCardsData.forEach(card => {
             const isObtained = obtainedCards.includes(card.id);
             const cardElement = this.createCollectionCard(card, isObtained);
             collectionGrid.appendChild(cardElement);
         });
         
-        // Mettre à jour les stats
         this.updateStats();
     },
 
@@ -175,7 +110,7 @@ const CollectionManager = {
             `;
         } else {
             cardDiv.innerHTML = `
-                <div class="locked-icon">🔒</div>
+                <div class="locked-text">?</div>
                 <div class="card-id">#${cardData.id}</div>
                 <div class="card-name">???</div>
             `;
@@ -202,7 +137,6 @@ const CollectionManager = {
         const statsElement = document.getElementById('collectionStats');
         statsElement.textContent = `${obtainedCards.length}/${CONFIG.TOTAL_CARDS}`;
         
-        // Changer la couleur selon la progression
         const percentage = (obtainedCards.length / CONFIG.TOTAL_CARDS) * 100;
         if (percentage === 100) {
             statsElement.style.background = 'linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%)';
@@ -214,28 +148,21 @@ const CollectionManager = {
     }
 };
 
-// ========================
-// CRÉATION DES CARTES PIXI
-// ========================
-
 const CardManager = {
     createCard(cardData, x, y) {
         const cardContainer = new PIXI.Container();
         cardContainer.x = x;
         cardContainer.y = y;
 
-        // Fond de la carte
         const cardBg = new PIXI.Graphics();
         cardBg.beginFill(cardData.color);
         cardBg.drawRoundedRect(0, 0, 200, 300, 15);
         cardBg.endFill();
 
-        // Bordure blanche
         cardBg.lineStyle(4, 0xFFFFFF, 0.8);
         cardBg.drawRoundedRect(0, 0, 200, 300, 15);
         cardContainer.addChild(cardBg);
 
-        // En-tête avec nom
         const headerBg = new PIXI.Graphics();
         headerBg.beginFill(0x000000, 0.4);
         headerBg.drawRoundedRect(10, 10, 180, 45, 8);
@@ -256,20 +183,17 @@ const CardManager = {
         nameText.anchor.set(0.5);
         cardContainer.addChild(nameText);
 
-        // Zone image
         const imageBg = new PIXI.Graphics();
         imageBg.beginFill(0x000000, 0.2);
         imageBg.drawRoundedRect(15, 65, 170, 170, 10);
         imageBg.endFill();
         cardContainer.addChild(imageBg);
 
-        // Charger l'image
         const sprite = PIXI.Sprite.from(CONFIG.CARD_IMAGE_PATH);
         sprite.x = 100;
         sprite.y = 150;
         sprite.anchor.set(0.5);
         
-        // Ajuster la taille
         const maxWidth = 160;
         const maxHeight = 160;
         const scale = Math.min(maxWidth / sprite.width, maxHeight / sprite.height);
@@ -277,14 +201,12 @@ const CardManager = {
         
         cardContainer.addChild(sprite);
 
-        // Pied de carte avec rareté
         const footerBg = new PIXI.Graphics();
         footerBg.beginFill(0x000000, 0.5);
         footerBg.drawRoundedRect(10, 245, 180, 45, 8);
         footerBg.endFill();
         cardContainer.addChild(footerBg);
 
-        // Badge de rareté
         const rarityColor = this.getRarityColor(cardData.rarity);
         const rarityBadge = new PIXI.Graphics();
         rarityBadge.beginFill(rarityColor);
@@ -303,7 +225,6 @@ const CardManager = {
         rarityText.anchor.set(0.5);
         cardContainer.addChild(rarityText);
 
-        // ID de la carte
         const idText = new PIXI.Text(`#${cardData.id}`, {
             fontFamily: 'Arial',
             fontSize: 12,
@@ -314,7 +235,6 @@ const CardManager = {
         idText.y = 12;
         cardContainer.addChild(idText);
 
-        // Badge "NOUVEAU" si c'est une nouvelle carte
         const obtainedCards = StorageManager.getObtainedCards();
         if (!obtainedCards.includes(cardData.id)) {
             const newBadge = new PIXI.Graphics();
@@ -335,7 +255,6 @@ const CardManager = {
             cardContainer.addChild(newText);
         }
 
-        // Rendre interactive
         cardContainer.eventMode = 'static';
         cardContainer.cursor = 'pointer';
 
@@ -347,7 +266,6 @@ const CardManager = {
             cardContainer.scale.set(0.9);
         });
 
-        // État initial pour animation
         cardContainer.alpha = 0;
         cardContainer.scale.set(0.7);
 
@@ -389,10 +307,6 @@ const CardManager = {
     }
 };
 
-// ========================
-// APPLICATION PRINCIPALE
-// ========================
-
 class CollectibleCardsApp {
     constructor() {
         this.app = null;
@@ -401,7 +315,6 @@ class CollectibleCardsApp {
     }
 
     init() {
-        // Créer l'application PixiJS
         this.app = new PIXI.Application({
             width: 1200,
             height: 420,
@@ -409,29 +322,15 @@ class CollectibleCardsApp {
             antialias: true
         });
 
-        // Ajouter le canvas
         document.getElementById('gameCanvas').appendChild(this.app.view);
 
-        // Créer le container des cartes
         this.cardsContainer = new PIXI.Container();
         this.app.stage.addChild(this.cardsContainer);
 
-        // Initialiser localStorage
         StorageManager.initialize();
-
-        // Afficher la collection initiale
         CollectionManager.updateCollectionDisplay();
 
-        // Configurer les boutons
         this.setupEventListeners();
-
-        console.log('╔═══════════════════════════════════════╗');
-        console.log('║   🎴 CARTES À COLLECTIONNER 🎴      ║');
-        console.log('║                                       ║');
-        console.log('║   📊 20 cartes à collectionner       ║');
-        console.log('║   🎲 Tirez 5 cartes aléatoires       ║');
-        console.log('║   📚 Complétez votre collection!     ║');
-        console.log('╚═══════════════════════════════════════╝');
     }
 
     setupEventListeners() {
@@ -440,7 +339,7 @@ class CollectibleCardsApp {
         });
 
         document.getElementById('saveButton').addEventListener('click', () => {
-            StorageManager.saveAll();
+            StorageManager.saveToLocalStorage();
         });
 
         document.getElementById('resetButton').addEventListener('click', () => {
@@ -451,24 +350,17 @@ class CollectibleCardsApp {
     }
 
     drawCards() {
-        // Obtenir 5 cartes aléatoires
         const cardsToShow = StorageManager.getRandomCards(CONFIG.CARDS_TO_DISPLAY);
         
-        // Ajouter ces cartes à la collection
         const cardIds = cardsToShow.map(card => card.id);
         StorageManager.addObtainedCards(cardIds);
         
-        // Afficher les cartes
         this.displayCards(cardsToShow);
         
-        // Mettre à jour la collection
         CollectionManager.updateCollectionDisplay();
-        
-        console.log('🎴 5 nouvelles cartes tirées!');
     }
 
     displayCards(cardsToShow) {
-        // Effacer les cartes existantes
         this.cardsContainer.removeChildren();
 
         const spacing = 220;
@@ -485,12 +377,9 @@ class CollectibleCardsApp {
             this.cardsContainer.addChild(card);
             CardManager.animateCardIn(card, index);
         });
-
-        console.log(`🎴 ${cardsToShow.length} cartes affichées`);
     }
 }
 
-// Démarrer l'application
 window.addEventListener('DOMContentLoaded', () => {
     new CollectibleCardsApp();
 });
