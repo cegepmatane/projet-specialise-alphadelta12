@@ -32,7 +32,7 @@ forgetBtn.addEventListener("click", function () {
   // supprimer l'item name du web storage
   localStorage.removeItem("name");
   // exécuter nameDisplayCheck() pour afficher la
-  // page personnalisée et changer le formulaire
+  // page personnalisée et changer le formulairea
   nameDisplayCheck();
 });
 
