@@ -1,0 +1,38 @@
+ 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poc LocalStorage avec scène PIXIJS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.3.2/pixi.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Les cartes</h2>
+        <div class="controller">
+            <button class="btn-tirer">Tirer les cartes</button>
+            <button class="sauvegarder">sauvegarder</button>
+            <button class="reinistialiser">Réinistialiser</button>
+        </div>
+    </div>
+
+    <div class="main-conteneur">
+        <div class="carte-conteneur">
+            <div id="canva"></div>
+        </div>
+
+        <div class="collection">
+            <div class="collection-header">
+                <h2>Collection</h2>
+                <div class="collection-stats" id="collection-stats">0/20</div>
+            </div>
+            <div class="collection-grid" id="collection-grid"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
