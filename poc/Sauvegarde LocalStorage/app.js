@@ -242,7 +242,7 @@ const CarteManager = {
         footerBg.endFill();
      
 
-        const rarityCouleur = thie.obtenirCouleurRarete(donneeCarte.rarity);
+        const rarityCouleur = this.obtenirCouleurRarete(donneeCarte.rarity);
         const badgerarete = new PIXI.Graphics();
         badgerarete.beginFill(rarityCouleur);
         badgerarete.drawRoundedRect(40, 255, 120, 28, 5);
@@ -273,7 +273,7 @@ const CarteManager = {
         carteConteneur.addChild(texteId);
 
 
-        const carteDejaObtenu = StorageManager.recupererCarteObtenu();
+        const carteDejaObtenu = StockageManager.recupererCarteObtenu();
         if(!carteDejaObtenu.includes(donneeCarte.id)) {
             const nouveauBadge = new PIXI.Graphics();
             nouveauBadge.beginFill(0xFF0000);
@@ -316,7 +316,7 @@ const CarteManager = {
         switch (rarity) {
             case 'Légendaire':
                 return 0xFFD700;
-            case 'Epic':
+            case 'Épique':
                 return 0xA020F0;
             case 'Rare':
                 return 0x4169E1;
