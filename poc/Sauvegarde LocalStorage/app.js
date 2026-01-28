@@ -178,3 +178,162 @@ const CollectionManager = {
 
 
 
+const CarteManager = {
+
+    creerCarte(donneeCarte, x, y) {
+
+        const carteConteneur = new PIXI.Container();
+        carteConteneur.x = x;
+        carteConteneur.y = y;
+
+        const cartebg = new PIXI.Graphics();
+        cartebg.beginFill(donneeCarte.color);
+        cartebg.endFill();
+
+        cartebg.lineStyle(4, 0xFFFFFF, 0.8);
+        cartebg.drawRoundedRect(0, 0, 200, 300, 15);
+        carteConteneur.addChild(cartebg);
+
+
+        const headerbg = new PIXI.Graphics();
+        headerbg.beginFill(0x000000, 0.4);
+        headerbg.drawRoundedRect(10, 10, 180, 45, 8);
+        headerbg.addChild(headerbg);
+
+
+        const texteNom = new PIXI.Text(donneeCarte.name, {
+            fontFamily: 'Arial',
+            fontSize: 18,
+            fontWeight: 'bold',
+            fill: 0xFFFFFF,
+            align: 'center',
+            wordWrap: true,
+            wordWrapWidth: 170
+        });
+
+        texteNom.x = 100;
+        texteNom.y = 25;
+        texteNom.anchor.set(0.5);
+        carteConteneur.addChild(texteNom);
+
+        const imageBg = new PIXI.Graphics();
+
+        imageBg.beginFill(0x000000, 0.2);
+        imageBg.drawRoundedRect(15, 65, 170, 170, 10);
+        imageBg.endFill();
+        carteConteneur.addChild(imageBg);
+
+        const sprite = PIXI.Sprite.from(CONFIG.CARD_IMAGE_PATH);
+        sprite.x = 100;
+        sprite.y - 150;
+        sprite.anchor.set(0.5);
+
+        const maxLongueur = 160;
+        const maxHauteur = 160;
+        const scale = Math.min(maxLongueur / sprite.longueur, maxHauteur / sprite.hauteur);
+        sprite.scale.set(scale);
+
+
+        carteConteneur.addChild(sprite);
+
+        const footerBg = new PIXI.Graphics();
+        footerBg.beginFill(0x000000, 0.5);
+        footerBg.drawRoundedRect(10, 245, 180, 45, 8);
+        footerBg.endFill();
+        carteConteneur.addChild(footerBg);
+
+
+        const couleurRarete = this.obtenirCouleurRarete(donneeCarte.rarity);
+        const badgeRarete = new PIXI.Graphics();
+        badgeRarete.beginFill(couleurRarete);
+        badgeRarete.drawRoundedRect(40, 255, 120, 28, 5);
+        badgeRarete.endFill();
+        carteConteneur.addChild(badgeRarete);
+
+
+        const texteRarete = new PIXI.Text(donneeCarte.rarity, {
+            fontFamily: 'Arial',
+            fontSize: 16,
+            fontWeight: 'bold',
+            fill: 0xFFFFFF
+        });
+
+        texteRarete.x = 100;
+        texteRarete.y = 269;
+        texteRarete.anchor.set(0.5);
+        carteConteneur.addChild(texteRarete);
+
+
+        const texteId = new PIXI.Text(`#${donneeCarte.id}`, {
+            fontFamily: 'Arial',
+            fontSize: 12,
+            fill: 0xFFFFFF,
+            alpha: 0.7
+        });
+        texteId.x = 15;
+        texteId.y = 12;
+        carteConteneur.addChild(texteId);
+
+
+        const carteDejaObtenu = StorageManager.recupererCarteObtenu();
+        if(!carteDejaObtenu.includes(donneeCarte.id)) {
+            const nouveauBadge = new PIXI.Graphics();
+            nouveauBadge.beginFill(0xFF0000);
+            nouveauBadge.drawRoundedRect(140, 10, 50, 20, 5);
+            nouveauBadge.endFill();
+            carteConteneur.addChild(nouveauBadge);
+
+
+            const texteNouveau = new PIXI.Text('NEW', {
+                fontFamily: 'Arial',
+                fontSize: 12,
+                fontWeight: 'bold',
+                fill: 0xFFFFFF
+            });
+            texteNouveau.x = 165;
+            texteNouveau.y = 20;
+            texteNouveau.anchor.set(0.5);
+            cardContainer.addChild(texteNouveau);
+        }
+
+
+        carteConteneur.eventMode = 'static';
+        carteConteneur.cursor = 'pointer';
+
+        carteConteneur.on('pointerover', () => {
+            carteConteneur.scale.set(0.95);
+        });
+        carteConteneur.on('pointerout', () => {
+            carteConteneur.scale.set(0.9);
+        });
+
+        carteConteneur.alpha = 0;
+        carteConteneur.scale.set(0.7);
+
+        return carteConteneur;
+    },
+
+
+    obtenirCouleurRarete(rarity) {
+        switch (rarity) {
+            case 'Légendaire':
+                return 0xFFD700;
+            case 'Epic':
+                return 0xA020F0;
+            case 'Rare':
+                return ox4169E1;
+            default:
+                return 0xC0C0C0;
+        }
+    },
+
+
+    animationCarte(carte, index) {
+
+        const delai = index * 100;
+
+        setTimeout(() => {
+            
+        })
+    }
+}
