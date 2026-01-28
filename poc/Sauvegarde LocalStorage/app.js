@@ -333,7 +333,102 @@ const CarteManager = {
         const delai = index * 100;
 
         setTimeout(() => {
-            
-        })
+            let alpha = 0;
+            let scale = 0.5;
+
+            const animer = () => {
+                if (alpha < 1) {
+                    alpha += 0.05;
+                    scale += 0.02;
+                    carte.alpha = alpha;
+                    carte.scale.set(Math.min(scale, 0.9));
+                    demanderAnimationFrame(animer);
+                }
+            };
+
+            animer();
+        }, delai);
+    }
+};
+
+
+class CollectibleCarteApp {
+
+    constructor() {
+        this.app = null;
+        this.cardContainer = null;
+        this.init();
+    }
+
+    init() {
+        this.app = new PIXI.Application({
+            largueur: 1200,
+            hauteur: 420,
+            backgroundColor: 0x1a1a2e,
+            antialias: true
+        });
+
+        document.getElementById('gameCanvas').appendChild(this.app.view);
+
+        this.cardContainer = new PIXI.Container();
+        this.app.stage.addChild(this.cardContainer);
+
+        StockageManager.initialiser();
+        CollectionManager.updateEcranCollection();
+
+        this.setupEventEcoute();
+    }
+
+
+    setupEventEcoute() {
+
+        document.getElementById('bouton-tirer').addEventListener('click', () => {
+            this.melangerCarte();
+        });
+
+        document.getElementById('bouton-sauvegarde').addEventListener('click', () => {
+            StockageManager.sauvegarderEnLocalStorage();
+        });
+
+        document.getElementById('bouton-reset').addEventListener('click', () => {
+            if (StockageManager.reinistialiserCollection()) {
+                CollectionManager.updateEcranCollection();
+            }
+        });
+    }
+
+
+    melangerCarte() {
+        const carteAMontrer = StockageManager.obtenirCarteRandom(CONFIG.CARDS_TO_DISPLAY);
+
+        const carteIds = carteAMontrer.map(carte => carte.id);
+        StockageManager.ajouterCarteObtenu(carteIds);
+
+        this.displayCartes(carteAMontrer);
+
+        CollectionManager.updateEcranCollection();
+    }
+
+    displayCartes(carteAMontrer) {
+        this.cardContainer.removeChildren();
+
+        const espace = 220;
+        const startX = 70;
+        const startY = 60;
+
+        carteAMontrer.forEach((donneeCarte, index) => {
+            const carte = CarteManager.creerCarte(
+                donneeCarte,
+                startX + (index * espace),
+                startY
+            );
+
+            this.cardContainer.addChild(carte);
+            CarteManager.animationCarte(carte, index);
+        });
     }
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    new CollectibleCarteApp();
+})
