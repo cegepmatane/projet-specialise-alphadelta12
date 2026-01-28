@@ -96,7 +96,7 @@ const CollectionManager = {
     updateEcranCollection() {
 
         const collectionGrille = document.getElementById('collection-grid');
-        const carteObtenu = StorageManager.recupererCarteObtenu();
+        const carteObtenu = StockageManager.recupererCarteObtenu();
 
 
         collectionGrille.innerHTML = '';
@@ -115,7 +115,7 @@ const CollectionManager = {
     creeCollectionCarte(donneeCarte, estObtenu) {
 
         const carteDiv = document.createElement('div');
-        carteDiv.className = `collection-card ${estObtenu ? 'obtenu' : 'bloqué'}`;
+        carteDiv.className = `collection-card ${estObtenu ? 'obtenu' : 'bloquer'}`;
 
 
         if (estObtenu) {
@@ -123,7 +123,7 @@ const CollectionManager = {
              <div class="obtenu-badge">✓</div>
                 <div class="carte-id">#${donneeCarte.id}</div>
                 <div class="carte-name">${donneeCarte.name}</div>
-                <div class="carte-rarity ${this.getRarityClass(donneeCarte.rarity)}">
+                <div class="carte-rarity ${this.obtenirClassRarete(donneeCarte.rarity)}">
                     ${donneeCarte.rarity}
                 </div>
             `;
@@ -162,12 +162,12 @@ const CollectionManager = {
         const statElement = document.getElementById('collection-stats');
         statElement.textContent = `${carteObtenu.length}/${CONFIGURATION.TOTAL_CARDS}`;
 
-        const pourcentage = (carteObtenu.length / CONFIG.TOTAL_CARDS) * 100;
+        const pourcentage = (carteObtenu.length / CONFIGURATION.TOTAL_CARDS) * 100;
 
         if(pourcentage === 100) {
             statElement.style.background = 'linear-gradient(135deg, #4CAF50 0%, #8BC34A 100%)';
         }else if (pourcentage >= 50) {
-            statsElement.style.background = 'linear-gradient(135deg, #FFC107 0%, #FF9800 100%)';
+            statElement.style.background = 'linear-gradient(135deg, #FFC107 0%, #FF9800 100%)';
         } else {
             statElement.style.background = 'rgba(0, 0, 0, 0.3)';
         }
@@ -223,14 +223,14 @@ const CarteManager = {
         imageBg.endFill();
         carteConteneur.addChild(imageBg);
 
-        const sprite = PIXI.Sprite.from(CONFIG.CARD_IMAGE_PATH);
+        const sprite = PIXI.Sprite.from(CONFIGURATION.CARD_IMAGE_PATH);
         sprite.x = 100;
-        sprite.y - 150;
+        sprite.y = 150;
         sprite.anchor.set(0.5);
 
         const maxLongueur = 160;
         const maxHauteur = 160;
-        const scale = Math.min(maxLongueur / sprite.longueur, maxHauteur / sprite.hauteur);
+        const scale = Math.min(maxLongueur / sprite.width, maxHauteur / sprite.height);
         sprite.scale.set(scale);
 
 
@@ -240,16 +240,14 @@ const CarteManager = {
         footerBg.beginFill(0x000000, 0.5);
         footerBg.drawRoundedRect(10, 245, 180, 45, 8);
         footerBg.endFill();
-        carteConteneur.addChild(footerBg);
+     
 
-
-        const couleurRarete = this.obtenirCouleurRarete(donneeCarte.rarity);
-        const badgeRarete = new PIXI.Graphics();
-        badgeRarete.beginFill(couleurRarete);
-        badgeRarete.drawRoundedRect(40, 255, 120, 28, 5);
-        badgeRarete.endFill();
-        carteConteneur.addChild(badgeRarete);
-
+        const rarityCouleur = thie.obtenirCouleurRarete(donneeCarte.rarity);
+        const badgerarete = new PIXI.Graphics();
+        badgerarete.beginFill(rarityCouleur);
+        badgerarete.drawRoundedRect(40, 255, 120, 28, 5);
+        badgerarete.endFill();
+        carteConteneur.addChild(badgerarete);
 
         const texteRarete = new PIXI.Text(donneeCarte.rarity, {
             fontFamily: 'Arial',
@@ -293,7 +291,7 @@ const CarteManager = {
             texteNouveau.x = 165;
             texteNouveau.y = 20;
             texteNouveau.anchor.set(0.5);
-            cardContainer.addChild(texteNouveau);
+            carteConteneur.addChild(texteNouveau);
         }
 
 
@@ -321,7 +319,7 @@ const CarteManager = {
             case 'Epic':
                 return 0xA020F0;
             case 'Rare':
-                return ox4169E1;
+                return 0x4169E1;
             default:
                 return 0xC0C0C0;
         }
@@ -342,7 +340,7 @@ const CarteManager = {
                     scale += 0.02;
                     carte.alpha = alpha;
                     carte.scale.set(Math.min(scale, 0.9));
-                    demanderAnimationFrame(animer);
+                    requestAnimationFrame(animer);
                 }
             };
 
@@ -362,13 +360,13 @@ class CollectibleCarteApp {
 
     init() {
         this.app = new PIXI.Application({
-            largueur: 1200,
-            hauteur: 420,
+            width: 1200,
+            height: 420,
             backgroundColor: 0x1a1a2e,
             antialias: true
         });
 
-        document.getElementById('gameCanvas').appendChild(this.app.view);
+        document.getElementById('canva').appendChild(this.app.view);
 
         this.cardContainer = new PIXI.Container();
         this.app.stage.addChild(this.cardContainer);
@@ -399,7 +397,7 @@ class CollectibleCarteApp {
 
 
     melangerCarte() {
-        const carteAMontrer = StockageManager.obtenirCarteRandom(CONFIG.CARDS_TO_DISPLAY);
+        const carteAMontrer = StockageManager.obtenirCarteRandom(CONFIGURATION.CARDS_TO_DISPLAY);
 
         const carteIds = carteAMontrer.map(carte => carte.id);
         StockageManager.ajouterCarteObtenu(carteIds);
