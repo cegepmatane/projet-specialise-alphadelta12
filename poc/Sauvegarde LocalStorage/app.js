@@ -7,7 +7,7 @@ const CONFIGURATION = {
     CARD_IMAGE_PATH: 'assets/screenshot.png'
 };
 
-
+// Recherche pour Jonathan => Ou est stocké LocalStorage  généralement au format SQLite dans des sous-dossiers spécifiques à chaque navigateur
 const CarteInitial = [
     { id: 1, name: "carte1", rarity: "Légendaire", color: 0xFF4444 },
     { id: 2, name: "carte2", rarity: "Légendaire", color: 0xFF8844 },
