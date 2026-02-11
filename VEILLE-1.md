@@ -2,7 +2,7 @@
 
 [Lien Projet ChatGPT:]( https://chatgpt.com/g/g-p-69811473e8e48191bf08e72fca301202-projet-clicker/project)
 
-[Lien vers Excel](https://docs.google.com/spreadsheets/d/1ksazwk2nnMnieKZmYDSE4Al-y6U_DzVZn3GGNxqMx_Y/edit?usp=sharing)
+[Lien vers RSS Automatisation Google Sheet](https://docs.google.com/spreadsheets/d/1ksazwk2nnMnieKZmYDSE4Al-y6U_DzVZn3GGNxqMx_Y/edit?usp=sharing)
 
 Projet : Music Clicker avec système de booster packs et collection de cartes.
 
