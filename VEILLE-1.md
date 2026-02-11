@@ -24,4 +24,4 @@ L’IA recommande :
 - Versionning des sauvegardes
 - Séparation logique : StorageManager, UIManager, GameManager
 
-[Capture Projet IA]()
+[Capture Projet IA](https://github.com/cegepmatane/projet-specialise-alphadelta12/blob/main/ChatProjet.png)
