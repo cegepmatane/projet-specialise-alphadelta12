@@ -25,3 +25,12 @@ L’IA recommande :
 - Séparation logique : StorageManager, UIManager, GameManager
 
 [Capture Projet IA](https://github.com/cegepmatane/projet-specialise-alphadelta12/blob/main/ChatProjet.png)
+
+
+
+Lien RSS
+https://pixijs.com/blog/rss.xml
+https://www.reddit.com/r/webdev/.rss
+https://www.reddit.com/r/gamedev/.rss
+https://dev.to/feed/tag/javascript
+https://css-tricks.com/feed/
