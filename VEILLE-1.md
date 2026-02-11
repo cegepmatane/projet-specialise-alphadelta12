@@ -4,6 +4,8 @@
 
 [Lien vers RSS Automatisation Google Sheet](https://docs.google.com/spreadsheets/d/1ksazwk2nnMnieKZmYDSE4Al-y6U_DzVZn3GGNxqMx_Y/edit?usp=sharing)
 
+[Lien start.me](https://start.me/p/zpQ87M/sitejeuxclicker)
+
 Projet : Music Clicker avec système de booster packs et collection de cartes.
 
 Technologies :JavaScript PixiJS LocalStorage PHP, HTML, CSS
