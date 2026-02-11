@@ -1,0 +1,27 @@
+# Veille Technologique 1 - Projet Music Clicker
+
+Lien Projet ChatGPT: https://chatgpt.com/g/g-p-69811473e8e48191bf08e72fca301202-projet-clicker/project
+
+Projet : Music Clicker avec système de booster packs et collection de cartes.
+
+Technologies :JavaScript PixiJS LocalStorage PHP, HTML, CSS
+
+
+Objectif :
+Créer un jeu clicker avec système de rareté, sauvegarde complète et animations avancées.
+
+
+
+Questions qui ont été posées 
+
+- Est-il fiable d’utiliser LocalStorage pour sauvegarder un jeu complet ?
+- Comment structurer un gameState ?
+- Comment gérer la rareté des cartes ?
+
+L’IA recommande :
+- Utilisation d’un objet gameState unique
+- Sauvegarde JSON.stringify()
+- Versionning des sauvegardes
+- Séparation logique : StorageManager, UIManager, GameManager
+
+[Capture Projet IA]()
