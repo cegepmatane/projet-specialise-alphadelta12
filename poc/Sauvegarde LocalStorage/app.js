@@ -66,7 +66,7 @@ const StockageManager = {
 
         try {
             localStorage.setItem(CONFIGURATION.COLLECTION_KEY, JSON.stringify(this.collectionActuelle));
-            console.log("donnee sauvegarder avec success" + this.collectionActuelle.length);
+            console.log("donnee sauvegarde" + this.collectionActuelle.length);
         }catch (error) {
             console.log("Erreur lors de la sauvegarde");
         }
