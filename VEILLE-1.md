@@ -1,6 +1,10 @@
 # Veille Technologique 1 - Projet Music Clicker
 
-Lien Projet ChatGPT: https://chatgpt.com/g/g-p-69811473e8e48191bf08e72fca301202-projet-clicker/project
+[Lien Projet ChatGPT:]( https://chatgpt.com/g/g-p-69811473e8e48191bf08e72fca301202-projet-clicker/project)
+
+[Lien vers RSS Automatisation Google Sheet](https://docs.google.com/spreadsheets/d/1ksazwk2nnMnieKZmYDSE4Al-y6U_DzVZn3GGNxqMx_Y/edit?usp=sharing)
+
+[Lien start.me](https://start.me/p/zpQ87M/sitejeuxclicker)
 
 Projet : Music Clicker avec système de booster packs et collection de cartes.
 
@@ -24,4 +28,16 @@ L’IA recommande :
 - Versionning des sauvegardes
 - Séparation logique : StorageManager, UIManager, GameManager
 
-[Capture Projet IA]()
+[Capture Projet IA](https://github.com/cegepmatane/projet-specialise-alphadelta12/blob/main/ChatProjet.png)
+
+
+
+Lien RSS
+[Lien RSS ](https://pixijs.com/blog/rss.xml)
+[Lien RSS ](https://www.reddit.com/r/webdev/.rss)
+[Lien RSS ](https://www.reddit.com/r/gamedev/.rss)
+[Lien RSS ](https://dev.to/feed/tag/javascript)
+[Lien RSS ](https://css-tricks.com/feed/)
+
+
+
