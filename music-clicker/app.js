@@ -23,11 +23,25 @@ disque.interactive = true;
 disque.buttonMode = true;
 app.stage.addChild(disque);
 
+// Texte du score
+const texteScore = new PIXI.Text("0 Fans", {
+    fontFamily: "Arial",
+    fontSize: 32,
+    fontWeight: "bold",
+    fill: 0xffffff,
+    align: "center"
+});
+texteScore.anchor.set(0.5);
+texteScore.x = centreX;
+texteScore.y = centreY - 160;
+app.stage.addChild(texteScore);
+
 disque.on("pointerdown", () => {
     points += 1;
     document.getElementById('coinsText').textContent = points;
+    texteScore.text = points + " Fans";
 
-    // Texte flottant +1
+   
     const texteFlottant = new PIXI.Text("+1", {
         fontFamily: "Arial",
         fontSize: 28,
