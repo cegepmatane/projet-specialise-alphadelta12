@@ -106,6 +106,8 @@
              -->
         </div>
     </div>
+
+    <script src="donnee.js"></script>
+    <script src="app.js?v=<?= time() ?>"></script>
 </body>
 </html>
-<script defer src="app.js"></script>

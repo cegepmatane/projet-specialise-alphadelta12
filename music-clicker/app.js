@@ -9,65 +9,59 @@ const app = new PIXI.Application({
 
 conteneurClicker.appendChild(app.view);
 
+
 let points = 0;
+let ptsParClic = 1;
+let ptsAutoParSec = 0;
+let upgradeNiveaux = {};
+let boosterTickers = [];
+let paliersDebloquer = {};
+let activerBonus = null;
+let collection = {};
+let estOuvertBooster = false;
+let boosterPrix = 20;
+let superBoosterPrix = 1;
+let boosterAcheter = 0;
+let superBoosterAcheter = 0;
+let managers = 0;
+let palierActuelDisque = 0;
+let renaissanceCompteur = 0;
+let renaissancePrix = 1000000;
+
+const COULEUR_PALIER_NORMAL = 0x333333;
+const COULEUR_PALIER_OBTENU = 0x1faa59;
+
+function initialiserCollection() {
+    collection = {};
+    lesCartes.forEach(carte => {
+        collection[carte.id] = collection[carte.id] || 0;
+    });
+}
 
 const centreX = app.screen.width / 2;
 const centreY = app.screen.height / 2;
 
-// Cercle cliquable
-const disque = new PIXI.Graphics();
-disque.beginFill(0x5555cc);
-disque.drawCircle(centreX, centreY, 100);
-disque.endFill();
-disque.interactive = true;
-disque.buttonMode = true;
-app.stage.addChild(disque);
+const graphique = new PIXI.Graphics();
+graphique.beginFill(0x0a0e27);
+graphique.drawRect(0, 0, app.screen.width, app.screen.height);
+graphique.endFill();
+app.stage.addChild(graphique);
 
-// Texte du score
-const texteScore = new PIXI.Text("0 Fans", {
-    fontFamily: "Arial",
-    fontSize: 32,
-    fontWeight: "bold",
-    fill: 0xffffff,
-    align: "center"
-});
-texteScore.anchor.set(0.5);
-texteScore.x = centreX;
-texteScore.y = centreY - 160;
-app.stage.addChild(texteScore);
+const cercleMilieu = new PIXI.Graphics();
+app.stage.addChild(cercleMilieu);
 
-disque.on("pointerdown", () => {
-    points += 1;
-    document.getElementById('coinsText').textContent = points;
-    texteScore.text = points + " Fans";
+function dessinerCercleMilieu(couleur) {
+  cercleMilieu.clear();
+  cercleMilieu.beginFill(couleur, 0.6);
+  cercleMilieu.drawCircle(centreX, centreY, 220);
+  cercleMilieu.endFill();
+}
 
-   
-    const texteFlottant = new PIXI.Text("+1", {
-        fontFamily: "Arial",
-        fontSize: 28,
-        fill: 0xffd700,
-        stroke: 0x000000,
-        strokeThickness: 4
-    });
-    texteFlottant.anchor.set(0.5);
-    texteFlottant.x = centreX + (Math.random() - 0.5) * 100;
-    texteFlottant.y = centreY - 60;
-    app.stage.addChild(texteFlottant);
+dessinerCercleMilieu(STYLE_DISQUE_PAR_PALIER[0].cercle);
 
-    let vitesse = 2.5;
-    const anim = (delta) => {
-        texteFlottant.y -= vitesse * delta;
-        texteFlottant.alpha -= 0.03 * delta;
-        vitesse *= 0.96;
-        if (texteFlottant.alpha <= 0) {
-            app.stage.removeChild(texteFlottant);
-            texteFlottant.destroy();
-            app.ticker.remove(anim);
-        }
-    };
-    app.ticker.add(anim);
+const conteneurRayon = new PIXI.Container();
+conteneurRayon.x = centreX;
+conteneurRayon.y = centreY;
+app.stage.addChild(conteneurRayon);
 
-    // Petit effet de clic
-    disque.scale.set(0.93);
-    setTimeout(() => disque.scale.set(1), 90);
-});
+let rayonsActuels = [];
