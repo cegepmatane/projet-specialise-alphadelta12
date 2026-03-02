@@ -1,0 +1,12 @@
+ 
+1. Risques liés à la sécurité
+Insécurité des "Server Actions" par défaut : Un risque majeur signalé par la communauté est que les Server Actions ne tiennent pas compte du middleware et sont, par conséquent, "insecure by default". Un utilisateur banni pourrait toujours appeler des fonctions via des Server Actions s'il connaît leur nom, car le serveur ne vérifie pas systématiquement les cookies ou les sessions à ce niveau,.
+Exposition de l'API Backend : Il est crucial de sécuriser non seulement l'interface utilisateur, mais aussi les routes de l'API. Si un utilisateur est bloqué sur le tableau de bord (/dashboard), cela ne l'empêche pas nécessairement d'accéder directement aux points de terminaison de l'API pour récupérer des données JSON sensibles.
+Gestion complexe de l'authentification : Bien que des bibliothèques comme NextAuth (ou Auth.js) facilitent les choses, la sécurisation des informations privées et le traitement des paiements nécessitent une configuration rigoureuse du côté serveur pour éviter les fuites de données,.
+2. Risques d'obsolescence et de pérennité
+"Framework Panic" : Il existe un sentiment d'instabilité au sein de la communauté, certains développeurs craignant que Next.js ne devienne trop complexe ou soit "dépassé" par de nouveaux frameworks plus légers.
+Dépendance excessive à l'IA : L'utilisation croissante d'agents de codage IA pour générer des structures complexes dans Next.js présente un risque pour les développeurs débutants, qui pourraient devenir trop dépendants de ces outils sans comprendre les fondamentaux, rendant la maintenance difficile si l'IA produit un code architectural médiocre,.
+3. Risques liés aux dépendances et aux ressources
+Saturation des ressources matérielles : Les versions récentes (Next.js 16) peuvent consommer une quantité excessive de mémoire vive (RAM). Sur des machines avec 8 Go de RAM, le serveur de développement peut provoquer des ralentissements extrêmes et une utilisation massive de la mémoire d'échange (swap).
+Bloat du cache (Turbopack) : Le cache de développement de Turbopack peut s'alourdir de manière disproportionnée, atteignant parfois 20 Go pour un seul projet, ce qui peut rapidement saturer le stockage disque des développeurs,.
+Explosion des coûts d'hébergement : Les nouveaux comportements de préchargement (prefetching) dans la version 16 peuvent multiplier par sept le nombre de requêtes, entraînant des augmentations de factures d'hébergement pouvant atteindre 800 $ pour certains utilisateur
