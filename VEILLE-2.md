@@ -27,7 +27,7 @@ L’IA recommande :
 - Activer l’interaction
 
 
-[Capture Projet IA](https://github.com/cegepmatane/projet-specialise-alphadelta12/blob/main/ChatProjet.png)
+[Capture Projet IA](https://github.com/cegepmatane/projet-specialise-alphadelta12/blob/main/ChatProjet2.png)
 
 
 
