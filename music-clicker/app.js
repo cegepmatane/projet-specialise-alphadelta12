@@ -258,5 +258,122 @@ function updateDesStats() {
     document.getElementById('parClicText').textContent = ptsParClic;
     document.getElementById('autoParClicText').textContent = ptsAutoParSec;
 
-    
+  
+    GenererLesUpgrades();
 }
+setInterval(() => {
+    if (ptsAutoParSec > 0) {
+        points += ptsAutoParSec / 10;
+        updateDesStats();
+    }
+}, 100);
+
+
+function GenererLesUpgrades() {
+    const conteneur = document.querySelector('.upgrades-grid');
+    conteneur.innerHTML = '';
+
+    donneeAmeliorations.forEach((upgrade, index) => {
+
+        const niveau = upgradeNiveaux[upgrade.id] || 0;
+
+    
+        let debloque = false;
+        if (index === 0) {
+            debloque = true;
+        } else {
+            const prevUpgrade = donneeAmeliorations[index - 1];
+            const prevNiveau = upgradeNiveaux[prevUpgrade.id] || 0;
+            debloque = prevNiveau > 0;
+        }
+
+        const prixActuel = Math.floor(upgrade.prix * Math.pow(1.4, niveau));
+
+        const carte = document.createElement('div');
+        carte.className = 'upgrade-card';
+
+        if (!debloque) {
+            carte.classList.add('locked');
+            carte.innerHTML = `
+                <div class="upgrade-header">
+                    <div class="upgrade-title">???</div>
+                    <div class="upgrade-level">Niv. ?</div>
+                </div>
+                <div class="upgrade-cost">
+                    <span class="cost-value">???</span>
+                </div>
+            `;
+        } else {
+
+          
+            if (points < prixActuel) {
+                carte.classList.add('disabled');
+            }
+
+            carte.innerHTML = `
+                <div class="upgrade-header">
+                    <div class="upgrade-title">${upgrade.name}</div>
+                    <div class="upgrade-level">Niv. ${niveau}</div>
+                </div>
+
+                <div class="upgrade-stats">
+                    +${upgrade.points} pts / clic
+                </div>
+
+                <div class="upgrade-cost">
+                    ${prixActuel} Fans
+                </div>
+            `;
+
+            carte.addEventListener('click', () => acheterAmelioration(upgrade.id));
+        }
+
+        conteneur.appendChild(carte);
+    });
+}
+
+function acheterAmelioration(id) {
+
+    const amelioration = donneeAmeliorations.find(u => u.id === id);
+    if (!amelioration) return;
+
+    const niveau = upgradeNiveaux[id] || 0;
+    const prix = Math.floor(amelioration.prix * Math.pow(1.4, niveau));
+
+    if (points >= prix) {
+
+        points -= prix;
+
+       
+        ptsParClic += amelioration.points;
+
+        
+        upgradeNiveaux[id] = niveau + 1;
+
+        updateDesStats();
+        GenererLesUpgrades();
+
+        showNotifications(`${amelioration.name} amélioré !`);
+
+    } else {
+        showNotifications("Pas assez de Fans !");
+    }
+}
+
+function showNotifications(message) {
+    console.log(message);
+
+    const notif = document.createElement("div");
+    notif.className = "notification";
+    notif.textContent = message;
+
+    document.body.appendChild(notif);
+
+    setTimeout(() => {
+        notif.remove();
+    }, 2000);
+}
+
+initialiserCollection();
+GenererLesUpgrades();
+
