@@ -2,6 +2,7 @@
 # Veille Technologique 2 - Projet Music Clicker
 
 [Lien Projet ChatGPT:](https://chatgpt.com/g/g-p-69811473e8e48191bf08e72fca301202-projet-clicker/shared/c/69a5f773-e204-832a-9d94-1a5b3ff4ee89?owner_user_id=user-YszbeM8Cu15fnpMpj6wRSXKH)
+[Lien chained prompting](https://chatgpt.com/g/g-p-69811473e8e48191bf08e72fca301202-projet-clicker/shared/c/69a5f8ee-b8bc-832e-ab1e-8e0cc24f15bc?owner_user_id=user-YszbeM8Cu15fnpMpj6wRSXKH)
 
 [Lien vers RSS Automatisation Google Sheet](https://docs.google.com/spreadsheets/d/1ksazwk2nnMnieKZmYDSE4Al-y6U_DzVZn3GGNxqMx_Y/edit?usp=sharing)
 
