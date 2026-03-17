@@ -19,7 +19,7 @@ let collection = {};
 let estOuvertBooster = false;
 let boosterPrix = 20;
 let boosterAcheter = 0;
-
+//ej
 function initialiserCollection() {
     collection = {};
     lesCartes.forEach(carte => {
@@ -53,26 +53,6 @@ conteneurRayon.x = centreX;
 conteneurRayon.y = centreY;
 app.stage.addChild(conteneurRayon);
 
-function genererRayons(couleur, nbRayons = 30) {
-  conteneurRayon.removeChildren();
-
-  for (let i = 0; i < nbRayons; i++) {
-    const rayon = new PIXI.Graphics();
-    const opacite = 0.15 + Math.random() * 0.25;
-
-    rayon.beginFill(couleur, opacite);
-    rayon.moveTo(0, 0);
-    rayon.lineTo(0, -350);
-    rayon.lineTo(10, -300);
-    rayon.lineTo(0, 0);
-    rayon.endFill();
-
-    rayon.rotation = (i * Math.PI * 2) / nbRayons;
-    conteneurRayon.addChild(rayon);
-  }
-}
-
-genererRayons(0x4a90ff, 30);
 
 app.ticker.add((delta) => {
     conteneurRayon.rotation += 0.003 * delta;
@@ -156,12 +136,6 @@ function updateDesStats() {
     document.getElementById('autoParClicText').textContent = ptsAutoParSec;
 }
 
-function formatNumber(nombre) {
-    if (nombre >= 1000000000) return (nombre / 1000000000).toFixed(1) + 'Billions';
-    if (nombre >= 1000000) return (nombre / 1000000).toFixed(1) + 'Millions';
-    if (nombre >= 1000) return (nombre / 1000).toFixed(1) + 'Milles';
-    return nombre;
-}
 
 setInterval(() => {
     if (ptsAutoParSec > 0) {
@@ -252,7 +226,7 @@ function acheterAmelioration(id){
         alert('Pas assez de Fans !');
     }
 }
-
+/*
 function genererPaliers() {
     const conteneur = document.querySelector('.paliers-liste');
     conteneur.innerHTML = '';
@@ -369,7 +343,7 @@ document.querySelectorAll('.tab-btn').forEach(bouton => {
         document.getElementById(tab + '-tab').classList.add('active');
     });
 });
-
+*/
 let boosterConteneur = null;
 let boosterActuelCarte = [];
 let carteActuelIndex = 0;
