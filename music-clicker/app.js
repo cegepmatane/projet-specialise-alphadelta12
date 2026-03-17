@@ -19,7 +19,7 @@ let collection = {};
 let estOuvertBooster = false;
 let boosterPrix = 20;
 let boosterAcheter = 0;
-//ej
+
 function initialiserCollection() {
     collection = {};
     lesCartes.forEach(carte => {
@@ -52,6 +52,7 @@ const conteneurRayon = new PIXI.Container();
 conteneurRayon.x = centreX;
 conteneurRayon.y = centreY;
 app.stage.addChild(conteneurRayon);
+
 
 
 app.ticker.add((delta) => {
@@ -136,6 +137,12 @@ function updateDesStats() {
     document.getElementById('autoParClicText').textContent = ptsAutoParSec;
 }
 
+function formatNumber(nombre) {
+    if (nombre >= 1000000000) return (nombre / 1000000000).toFixed(1) + 'Billions';
+    if (nombre >= 1000000) return (nombre / 1000000).toFixed(1) + 'Millions';
+    if (nombre >= 1000) return (nombre / 1000).toFixed(1) + 'Milles';
+    return nombre;
+}
 
 setInterval(() => {
     if (ptsAutoParSec > 0) {
@@ -226,7 +233,7 @@ function acheterAmelioration(id){
         alert('Pas assez de Fans !');
     }
 }
-/*
+
 function genererPaliers() {
     const conteneur = document.querySelector('.paliers-liste');
     conteneur.innerHTML = '';
@@ -343,7 +350,7 @@ document.querySelectorAll('.tab-btn').forEach(bouton => {
         document.getElementById(tab + '-tab').classList.add('active');
     });
 });
-*/
+
 let boosterConteneur = null;
 let boosterActuelCarte = [];
 let carteActuelIndex = 0;
@@ -513,14 +520,14 @@ function displayCarte(index) {
     carteConteneur.addChild(texteDeRareter);
 
     const pointsGagné = PtsAutoSelonPalier(carte.rarity);
-    const textePoints = new PIXI.Text(`+${pointsGagné} pts/sec`, {
+   /* const textePoints = new PIXI.Text(`+${pointsGagné} pts/sec`, {
         fontSize: 12,
         fill: 0xffffff,
         fontWeight: 'bold'
     });
     textePoints.anchor.set(0.5);
     textePoints.y = 120;
-    carteConteneur.addChild(textePoints);
+    carteConteneur.addChild(textePoints);*/
 
     const compteur = new PIXI.Text(`${index + 1} / ${boosterActuelCarte.length}`, {
         fontSize: 20,
