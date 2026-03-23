@@ -20,6 +20,56 @@ let estOuvertBooster = false;
 let boosterPrix = 20;
 let boosterAcheter = 0;
 
+
+const CLE_SAUVEGARDE = 'musicClicker_sauvegarde';
+
+function sauvegarderJeu() {
+    const sauvegarde = {
+        points:          points,
+        ptsParClic:      ptsParClic,
+        ptsAutoParSec:   ptsAutoParSec,
+        upgradeNiveaux:  upgradeNiveaux,
+        paliersDebloquer:paliersDebloquer,
+        collection:      collection,
+        boosterPrix:     boosterPrix,
+        boosterAcheter:  boosterAcheter,
+        dateSauvegarde:  Date.now()
+    };
+    try {
+        localStorage.setItem(CLE_SAUVEGARDE, JSON.stringify(sauvegarde));
+    } catch (erreur) {
+        console.warn('Impossible de sauvegarder :', erreur);
+    }
+}
+
+function chargerJeu() {
+    try {
+        const donneesBrutes = localStorage.getItem(CLE_SAUVEGARDE);
+        if (!donneesBrutes) return false;
+
+        const sauvegarde = JSON.parse(donneesBrutes);
+
+        points           = sauvegarde.points           ?? 0;
+        ptsParClic       = sauvegarde.ptsParClic       ?? 1;
+        ptsAutoParSec    = sauvegarde.ptsAutoParSec    ?? 0;
+        upgradeNiveaux   = sauvegarde.upgradeNiveaux   ?? {};
+        paliersDebloquer = sauvegarde.paliersDebloquer ?? {};
+        collection       = sauvegarde.collection       ?? {};
+        boosterPrix      = sauvegarde.boosterPrix      ?? 20;
+        boosterAcheter   = sauvegarde.boosterAcheter   ?? 0;
+
+      
+        return true;
+    } catch (erreur) {
+     
+        return false;
+    }
+}
+
+
+
+setInterval(sauvegarderJeu, 30000);
+
 function initialiserCollection() {
     collection = {};
     lesCartes.forEach(carte => {
