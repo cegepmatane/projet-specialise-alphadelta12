@@ -1,0 +1,55 @@
+name: Audit de securite
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Audit Composer PHP
+        run: |
+          sudo apt-get install -y composer 2>/dev/null || true
+          if [ -f composer.json ]; then
+            composer audit 2>&1 | head -50 > rapport.txt || true
+          else
+            echo "Aucun composer.json trouve." > rapport.txt
+          fi
+
+      - name: Audit npm PixiJS
+        run: |
+          if [ -f package.json ]; then
+            npm install 2>/dev/null || true
+            npm audit 2>&1 | head -50 >> rapport.txt || true
+          else
+            echo "Aucun package.json trouve." >> rapport.txt
+          fi
+
+      - name: Creer un Issue avec les resultats
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const rapport = fs.readFileSync('rapport.txt', 'utf8');
+            const date = new Date().toISOString().split('T')[0];
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Audit securite - ${date}`,
+              body: `## Resultats\n\n\`\`\`\n${rapport}\n\`\`\`\n\n*Genere automatiquement*`,
+              labels: ['veille-auto', 'sécurité']
+            });
+
+      - name: Poster dans Discord
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          RAPPORT=$(head -5 rapport.txt)
+          curl -H "Content-Type: application/json" \
+            -d "{\"content\":\"Audit securite $DATE\n\`\`\`\n$RAPPORT\n\`\`\`\"}" \
+            $WEBHOOK

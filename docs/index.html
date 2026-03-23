@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Veille Techno — PHP + PixiJS</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+body{font-family:sans-serif;background:#0f0f1a;color:#e2e8f0;margin:0;padding:2rem}
+h1{color:#7c3aed;margin-bottom:2rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.card{background:#1e1e2e;border-radius:12px;padding:1.5rem}
+.card h2{margin-top:0;font-size:.9rem;color:#94a3b8;text-transform:uppercase}
+.stat{font-size:2rem;font-weight:bold;color:#7c3aed}
+footer{text-align:right;color:#475569;font-size:.8rem;margin-top:2rem}
+</style>
+</head>
+<body>
+<h1>Veille Technologique — PHP + PixiJS</h1>
+<div class="grid">
+  <div class="card"><h2>Stars PixiJS</h2><div class="stat" id="stars">…</div></div>
+  <div class="card"><h2>Forks</h2><div class="stat" id="forks">…</div></div>
+  <div class="card"><h2>Derniere version</h2><div class="stat" id="version">…</div></div>
+  <div class="card" style="grid-column:1/-1"><h2>Comparaison avec concurrents (stars)</h2><canvas id="chart"></canvas></div>
+</div>
+<footer id="maj">Chargement…</footer>
+<script>
+async function load(){
+  const base=location.pathname.replace(/\/$/,'');
+  try{
+    const t=await fetch(base+'/data/techno-stats.json').then(r=>r.json());
+    document.getElementById('stars').textContent=t.stargazers_count?.toLocaleString()??'N/A';
+    document.getElementById('forks').textContent=t.forks_count?.toLocaleString()??'N/A';
+    const r=await fetch(base+'/data/release.json').then(r=>r.json());
+    document.getElementById('version').textContent=r.tag_name??'N/A';
+    const m=await fetch(base+'/data/meta.json').then(r=>r.json());
+    document.getElementById('maj').textContent='Mise a jour : '+new Date(m.derniere_maj).toLocaleString('fr-CA');
+    const c=await fetch(base+'/data/comparaison.json').then(r=>r.json());
+    new Chart(document.getElementById('chart'),{
+      type:'bar',
+      data:{labels:c.map(x=>x.nom),datasets:[{label:'Stars',data:c.map(x=>x.stars),backgroundColor:'#7c3aed'}]},
+      options:{plugins:{legend:{labels:{color:'#e2e8f0'}}},scales:{x:{ticks:{color:'#e2e8f0'}},y:{ticks:{color:'#e2e8f0'}}}}
+    });
+  }catch(e){console.error(e)}
+}
+load();
+</script>
+</body>
+</html>
