@@ -46,7 +46,7 @@ jobs:
 
       - name: Poster dans Discord
         env:
-          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+         WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_SECURITE }}
         run: |
           DATE=$(date +%Y-%m-%d)
           RAPPORT=$(head -5 rapport.txt)
