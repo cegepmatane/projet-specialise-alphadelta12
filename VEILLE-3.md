@@ -14,3 +14,6 @@
  Fichier collecte-veille => https://github.com/cegepmatane/projet-specialise-alphadelta12/blob/main/.github/workflows/collecte-veille.yml
 
  Fichier audit-techno.md => https://github.com/cegepmatane/projet-specialise-alphadelta12/blob/main/doc/audit-techno.md
+
+
+ Github Pages => https://cegepmatane.github.io/projet-specialise-alphadelta12/
