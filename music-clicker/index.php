@@ -37,6 +37,18 @@
                 <span class="stat-label">Auto/sec</span>
                 <span id="autoParClicText" class="stat-valeur">0</span>
             </div>
+            <button onclick="reinitialiserJeu()" style="
+                margin-top: 10px;
+                background: #7f1d1d;
+                color: #fca5a5;
+                border: 1px solid #b91c1c;
+                padding: 6px 14px;
+                border-radius: 6px;
+                font-size: 12px;
+                cursor: pointer;
+                ">Réinitialiser
+            </button>
+
         </div>
     </div>
 
@@ -82,7 +94,7 @@
             </div>
         </div>
     </div>
-
+  
     <script src="donnee.js"></script>
     <script src="app.js?v=<?= time() ?>"></script>
 

@@ -71,9 +71,11 @@ function chargerJeu() {
 setInterval(sauvegarderJeu, 30000);
 
 function initialiserCollection() {
-    collection = {};
     lesCartes.forEach(carte => {
-        collection[carte.id] = collection[carte.id] || 0;
+     
+        if (collection[carte.id] === undefined) {
+            collection[carte.id] = 0;
+        }
     });
 }
 
@@ -141,7 +143,7 @@ function creerDisqueImage(cheminImage) {
 function onDisqueClique() {
     const gain = ptsParClic || 1;
     points += gain;
-
+    sauvegarderJeu();
     updateDesStats();
 
     const texteFlottant = new PIXI.Text("+" + gain, {
@@ -276,7 +278,7 @@ function acheterAmelioration(id){
         points -= prix;
         ptsParClic += Number(amelioration.points) || 0;
         upgradeNiveaux[id] = niveau + 1;
-
+        sauvegarderJeu();
         updateDesStats();
         GenererLesUpgrades();
     } else {
@@ -322,7 +324,7 @@ function acheterPalier(id) {
     points -= palier.prix;
     ptsAutoParSec += palier.ptsAutoParSec;
     paliersDebloquer[id] = true;
-
+    sauvegarderJeu();
     updateDesStats();
     genererPaliers();
     marquerPalierCommeObtenu(id);
@@ -447,6 +449,7 @@ document.getElementById('ouvrirBooster').addEventListener('click', () => {
             collection[randomCarte.id] = 0;
         }
         collection[randomCarte.id]++;
+        sauvegarderJeu();
     }
 
     carteActuelIndex = 0;
@@ -707,16 +710,18 @@ function getRandomRareter(rarities) {
     }
     return rarities[0].name;
 }
+chargerJeu();
+initialiserCollection(); 
 
-initialiserCollection();
-GenererLesUpgrades();
-genererPaliers();
 
 Object.keys(paliersDebloquer).forEach(id => {
-  if (paliersDebloquer[id]) {
-    marquerPalierCommeObtenu(Number(id));
-  }
+    if (paliersDebloquer[id]) {
+        marquerPalierCommeObtenu(Number(id));
+    }
 });
+
+GenererLesUpgrades();
+genererPaliers();
 genererCollection();
 updateBoosterBouton();
 updateDesStats();
