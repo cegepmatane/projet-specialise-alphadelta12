@@ -68,29 +68,25 @@ let spriteDisque = null;
 
 const IMAGE_DISQUE_DEFAUT = "assets/disc1.png";
 
-
-
 function creerDisqueImage(cheminImage) {
-    if (!spriteDisque) {
-        const texture = PIXI.Texture.from(cheminImage);
-        spriteDisque = new PIXI.Sprite(texture);
+  if (!spriteDisque) {
+    const texture = PIXI.Texture.from(cheminImage);
+    spriteDisque = new PIXI.Sprite(texture);
 
-        spriteDisque.anchor.set(0.5);
-        spriteDisque.scale.set(0.3);
-        spriteDisque.x = 0;
-        spriteDisque.y = -25;
+    spriteDisque.anchor.set(0.5);
+    spriteDisque.scale.set(0.3);
+    spriteDisque.x = 0;
+    spriteDisque.y = -25;
 
-        spriteDisque.interactive = true;
-        spriteDisque.buttonMode = true;
-        spriteDisque.on("pointerdown", onDisqueClique);
+    spriteDisque.interactive = true;
+    spriteDisque.buttonMode = true;
+    spriteDisque.on("pointerdown", onDisqueClique);
 
-        conteneurDisque.addChild(spriteDisque);
-    } else {
-        spriteDisque.texture = PIXI.Texture.from(cheminImage);
-    }
-    }
-
-
+    conteneurDisque.addChild(spriteDisque);
+  } else {
+    spriteDisque.texture = PIXI.Texture.from(cheminImage);
+  }
+}
 
 function onDisqueClique() {
     const gain = ptsParClic || 1;
@@ -135,15 +131,18 @@ function onDisqueClique() {
 
 creerDisqueImage(IMAGE_DISQUE_DEFAUT);
 
-
-
 function updateDesStats() {
     document.getElementById('coinsText').textContent = Math.floor(points);
     document.getElementById('parClicText').textContent = ptsParClic;
     document.getElementById('autoParClicText').textContent = ptsAutoParSec;
 }
 
-
+function formatNumber(nombre) {
+    if (nombre >= 1000000000) return (nombre / 1000000000).toFixed(1) + 'Billions';
+    if (nombre >= 1000000) return (nombre / 1000000).toFixed(1) + 'Millions';
+    if (nombre >= 1000) return (nombre / 1000).toFixed(1) + 'Milles';
+    return nombre;
+}
 
 setInterval(() => {
     if (ptsAutoParSec > 0) {
@@ -151,8 +150,6 @@ setInterval(() => {
         updateDesStats();
     }
 }, 100);
-
-
 
 function GenererLesUpgrades() {
     const conteneur = document.querySelector('.upgrades-grid');
@@ -181,7 +178,7 @@ function GenererLesUpgrades() {
             carte.innerHTML = `
                 <div class="upgrade-header">
                     <div class="upgrade-title">???</div>
-                  
+                    <div class="upgrade-level">Niv. ?</div>
                 </div>
                 <div class="upgrade-stats">
                     <div class="upgrade-stat">
@@ -190,7 +187,7 @@ function GenererLesUpgrades() {
                     </div>
                 </div>
                 <div class="upgrade-cost">
-                 
+                    <span class="cost-label">Coût d'achat</span>
                     <span class="cost-value">???</span>
                 </div>
             `;
@@ -198,7 +195,7 @@ function GenererLesUpgrades() {
             carte.innerHTML = `
                 <div class="upgrade-header">
                     <div class="upgrade-title">${upgrade.name}</div>
-                
+                    <div class="upgrade-level">Niv. ${niveau}</div>
                 </div>
                 <div class="upgrade-stats">
                     <div class="upgrade-stat">
@@ -218,7 +215,6 @@ function GenererLesUpgrades() {
         conteneur.appendChild(carte);
     });
 }
-
 
 function acheterAmelioration(id){
 
@@ -279,15 +275,69 @@ function acheterPalier(id) {
 
     updateDesStats();
     genererPaliers();
-    //marquerPalierCommeObtenu(id);
+    marquerPalierCommeObtenu(id);
     GenererLesUpgrades();
   } else {
     alert('Pas assez de Fans !');
   }
 }
 
-//Booster
+function PtsAutoSelonPalier(rarity) {
+    let plusHautPalier = 0;
+    Object.keys(paliersDebloquer).forEach(id => {
+        if (paliersDebloquer[id]) {
+            const palierId = Number(id);
+            if (palierId > plusHautPalier) {
+                plusHautPalier = palierId;
+            }
+        }   
+    });
 
+    if(plusHautPalier === 0) {
+        return 0;
+    }
+    
+    const valeurPalier = {
+        1: { common: 1, rare: 5, epic: 50, legendaire: 1000, secret: 1000000},
+        2: { common: 1, rare: 5, epic: 50, legendaire: 1000, secret: 1000000},
+        3: { common: 10, rare: 100, epic: 500, legendaire: 10000, secret: 1000000},
+    };
+
+    if (valeurPalier[plusHautPalier] && valeurPalier[plusHautPalier][rarity]) {
+        return valeurPalier[plusHautPalier][rarity];
+    }
+
+    return 0;
+}
+
+function marquerPalierCommeObtenu(idPalier) {
+  const cartes = document.querySelectorAll('.palier-card');
+
+  cartes.forEach(carte => {
+    const nom = carte.querySelector('.palier-name');
+    if (!nom) return;
+
+    if (donneePalier.find(p => p.id === idPalier)?.name === nom.textContent) {
+      carte.classList.add('palier-obtenu');
+
+      const footer = carte.querySelector('.palier-footer');
+      if (footer) {
+        footer.innerHTML = `<div class="palier-status unlocked">OBTENU</div>`;
+      }
+
+      carte.style.pointerEvents = 'none';
+
+      carte.animate(
+        [
+          { transform: 'scale(1)', boxShadow: '0 0 0px #1faa59' },
+          { transform: 'scale(1.05)', boxShadow: '0 0 20px #1faa59' },
+          { transform: 'scale(1)', boxShadow: '0 0 0px #1faa59' }
+        ],
+        { duration: 500, easing: 'ease-out' }
+      );
+    }
+  });
+}
 
 document.querySelectorAll('.tab-btn').forEach(bouton => {
     bouton.addEventListener('click', () => {
@@ -305,13 +355,11 @@ let boosterConteneur = null;
 let boosterActuelCarte = [];
 let carteActuelIndex = 0;
 
-
 function updateBoosterBouton() {
     const bouton = document.getElementById('ouvrirBooster');
     const prixSpan = bouton.querySelector('.btn-prix');
     prixSpan.textContent = `${boosterPrix} fans`;
 }
-
 
 document.getElementById('ouvrirBooster').addEventListener('click', () => {
 

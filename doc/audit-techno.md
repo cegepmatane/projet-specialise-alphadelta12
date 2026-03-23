@@ -1,4 +1,4 @@
-# 🧾 Audit technologique — Music Clicker
+#  Audit technologique — Music Clicker
 
 ## Résumé des réponses de l’IA
 
@@ -24,68 +24,68 @@ L’IA recommande d’améliorer la structure du code, d’ajouter un backend si
 
 ---
 
-## 🧠 Analyse critique
+## Analyse critique
 
 ### A) Santé des dépendances
 
-✅ D’accord
+ D’accord
 PixiJS est une librairie populaire et adaptée pour les jeux avec animations.
 
-⚠️ Partiellement d’accord
+Partiellement d’accord
 L’utilisation via CDN est correcte pour un projet scolaire, mais moins adaptée pour un projet plus avancé.
 
 ---
 
 ### B) Maturité et pérennité
 
-✅ D’accord
+ D’accord
 JavaScript et PixiJS sont des technologies fiables et largement utilisées.
 
-⚠️ Partiellement d’accord
+Partiellement d’accord
 Le projet est seulement en frontend. Il manque un backend pour une version plus complète.
 
 ---
 
 ### C) Architecture
 
-⚠️ Partiellement d’accord
+
 Le projet fonctionne, mais le code est dans un seul fichier, ce qui rend la maintenance plus difficile.
 
-👉 Amélioration possible :
+ Amélioration possible :
 Séparer le code en plusieurs fichiers (logique, stockage, affichage).
 
 ---
 
 ### D) Alternatives
 
-✅ D’accord
+ D’accord
 Des technologies comme Phaser existent pour les jeux web plus complets.
 
-⚠️ Partiellement d’accord
+ Partiellement d’accord
 PixiJS reste un bon choix pour un projet simple comme celui-ci.
 
 ---
 
-## 📊 Conclusion personnelle
+## Conclusion personnelle
 
 Le projet utilise des technologies solides et adaptées pour une preuve de concept. Il fonctionne bien, mais des améliorations sont nécessaires au niveau de l’architecture et de l’organisation du code pour le rendre plus professionnel.
 
 ---
 
-## ⭐ Note finale
+##  Note finale
 
 **7.5 / 10**
 
 ### Justification :
 
-* Bon choix de technologies
-* Projet fonctionnel
-* Architecture améliorable
-* Absence de backend
-* Scalabilité limitée
+Bon choix de technologies
+ Projet fonctionnel
+ Architecture améliorable
+Absence de backend
+ Scalabilité limitée
 
 ---
 
-## 💬 Réflexion sur l’IA
+## Réflexion sur l’IA
 
 L’IA donne une bonne base d’analyse, mais certaines recommandations doivent être adaptées au contexte d’un projet étudiant avec des contraintes de temps.
