@@ -66,7 +66,27 @@ function chargerJeu() {
     }
 }
 
+function reinitialiserJeu() {
+    if (!confirm('Veux-tu vraiment réinitialiser toute ta progression ?')) return;
 
+    localStorage.removeItem(CLE_SAUVEGARDE);
+
+    points           = 0;
+    ptsParClic       = 1;
+    ptsAutoParSec    = 0;
+    upgradeNiveaux   = {};
+    paliersDebloquer = {};
+    collection       = {};
+    boosterPrix      = 20;
+    boosterAcheter   = 0;
+
+    initialiserCollection();
+    updateDesStats();
+    GenererLesUpgrades();
+    genererPaliers();
+    genererCollection();
+    updateBoosterBouton();
+}
 
 setInterval(sauvegarderJeu, 30000);
 
