@@ -98,14 +98,19 @@ const lesCartes = [
 
 
 const donneeAmeliorations = [
-    { id: 1, name: "Nouveau Riff", prix: 10, points: 1 },
-    { id: 2, name: "Seance de répétition", prix: 200, points: 3 },
-    { id: 3, name: "Nouvelle Composition", prix: 800, points: 5 },
-    { id: 4, name: "Soiree Découverte", prix: 3000, points: 8 },
+    { id: 1, name: "Nouveau Riff", prix: 10, points: 1, bonus: "+20% coins pendant 2min" },
+    { id: 2, name: "Seance de répétition", prix: 200, points: 3, bonus: "+5% cartes rares x3" },
+    { id: 3, name: "Nouvelle Composition", prix: 800, points: 5, bonus: null },
+    { id: 4, name: "Soiree Découverte", prix: 3000, points: 8, bonus: "10% doubler pts/clic" },
+    { id: 5, name: "Amélioration du matériel", prix: 7000, points: 12, bonus: "+15% coins pendant 2min" },
+    { id: 6, name: "Pollisage du style", prix: 15000, points: 25, bonus: null },
 ];
 
 const donneePalier = [
     { id: 1, name: "Garage Band", prix: 500, ptsAutoParSec: 10, description: "Débute ton aventure musicale + Les cartes rapportent des pts/sec"},
     { id: 2, name: "Premier concert", prix: 1500, ptsAutoParSec: 30, description: "Joue devant un petit public"},
     { id: 3, name: "Radio Locale", prix: 10000, ptsAutoParSec: 150, description: "Diffuse ta musique localement + Les cartes rapportent x10 fois plus de pts/sec"},
+    { id: 4, name: "Ma Premiere Tournée", prix: 50000, ptsAutoParSec: 300, description: "Voyage et performe" },
+    { id: 5, name: "Propulsion au sommet", prix: 150000, ptsAutoParSec: 500, description: "Voyage et performe + Les cartes rapportent x10 fois plus de pts/sec" },
+    { id: 6, name: "Concert en Stade", prix: 400000, ptsAutoParSec: 750, description: "Des milliers de fans" },
 ];
