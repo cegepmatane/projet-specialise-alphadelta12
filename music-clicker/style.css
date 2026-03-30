@@ -94,11 +94,11 @@ body, html{
     display: flex;
     gap: 5px;
     padding: 10px 10px 5px 10px;
-    /* background: linear-gradient(180deg, #0f1535 0%, transparent 100%); */
+    background: linear-gradient(180deg, #0f1535 0%, transparent 100%); 
     position: sticky;
     top: 0;
     z-index: 100;
-    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(10px); */
 }
 
 
@@ -109,14 +109,14 @@ body, html{
     font-size: 13px;
     color: #8b9dc3;
     background: linear-gradient(135deg, #1a2555 0%, #2a3565 100%);
-    botder: 2px solid #4a90ff;
+   
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 0 10px rgba(74, 144, 255, 0.3);
 
 }
-/*
+
 .tab-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 20px rgba(74, 144, 255, 0.6);
@@ -127,7 +127,7 @@ body, html{
     background: linear-gradient(135deg, #4a90ff 0%, #6aa0ff 100%);
     color: #ffffff;
     box-shadow: 0 0 25px rgba(74, 144, 255, 0.8);
-}*/
+}
 
 .tab-contenu{
     display: none;
