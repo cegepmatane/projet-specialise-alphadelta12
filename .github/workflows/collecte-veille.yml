@@ -1,50 +1,42 @@
 name: Collecte donnees veille
-
 on:
   schedule:
     - cron: '0 8 * * 1'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   collecte:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Collecter les stats GitHub
         run: |
-          mkdir -p data
+          mkdir -p docs/data
           TECHNO="pixijs/pixijs"
           CONCURRENT1="mrdoob/three.js"
           CONCURRENT2="nicktindall/cyclon.js"
-
-          curl -s "https://api.github.com/repos/$TECHNO" > data/techno-stats.json
-          curl -s "https://api.github.com/repos/$TECHNO/stats/participation" > data/commits.json
-          curl -s "https://api.github.com/repos/$TECHNO/releases/latest" > data/release.json
-
-          echo '[' > data/comparaison.json
+          curl -s "https://api.github.com/repos/$TECHNO" > docs/data/techno-stats.json
+          curl -s "https://api.github.com/repos/$TECHNO/stats/participation" > docs/data/commits.json
+          curl -s "https://api.github.com/repos/$TECHNO/releases/latest" > docs/data/release.json
+          echo '[' > docs/data/comparaison.json
           for REPO in $TECHNO $CONCURRENT1 $CONCURRENT2; do
             STATS=$(curl -s "https://api.github.com/repos/$REPO")
             NOM=$(echo $STATS | jq -r '.name')
             STARS=$(echo $STATS | jq '.stargazers_count')
             FORKS=$(echo $STATS | jq '.forks_count')
             ISSUES=$(echo $STATS | jq '.open_issues_count')
-            echo "{\"nom\":\"$NOM\",\"repo\":\"$REPO\",\"stars\":$STARS,\"forks\":$FORKS,\"issues\":$ISSUES}," >> data/comparaison.json
+            echo "{\"nom\":\"$NOM\",\"repo\":\"$REPO\",\"stars\":$STARS,\"forks\":$FORKS,\"issues\":$ISSUES}," >> docs/data/comparaison.json
           done
-          sed -i '$ s/,$//' data/comparaison.json
-          echo ']' >> data/comparaison.json
-
+          sed -i '$ s/,$//' docs/data/comparaison.json
+          echo ']' >> docs/data/comparaison.json
       - name: Generer le timestamp
         run: |
-          echo "{\"derniere_maj\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}" > data/meta.json
-
+          echo "{\"derniere_maj\":\"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}" > docs/data/meta.json
       - name: Commit les donnees
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email 'actions@github.com'
-          git add data/
+          git add docs/data/
           git diff --staged --quiet || git commit -m "Mise a jour donnees veille [skip ci]"
           git push
