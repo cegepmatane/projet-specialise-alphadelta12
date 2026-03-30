@@ -120,17 +120,42 @@ function dessinerCercleMilieu(couleur) {
 
 dessinerCercleMilieu(0x1a2045);
 
+
 const conteneurRayon = new PIXI.Container();
 conteneurRayon.x = centreX;
 conteneurRayon.y = centreY;
 app.stage.addChild(conteneurRayon);
 
+let rayonsActuels = [];
 
+
+
+function genererRayons(couleur, nbRayons = 30) {
+  conteneurRayon.removeChildren();
+  rayonsActuels = [];
+
+  for (let i = 0; i < nbRayons; i++) {
+    const rayon = new PIXI.Graphics();
+    const opacite = 0.15 + Math.random() * 0.25;
+
+    rayon.beginFill(couleur, opacite);
+    rayon.moveTo(0, 0);
+    rayon.lineTo(0, -350);
+    rayon.lineTo(10, -300);
+    rayon.lineTo(0, 0);
+    rayon.endFill();
+
+    rayon.rotation = (i * Math.PI * 2) / nbRayons;
+    conteneurRayon.addChild(rayon);
+    rayonsActuels.push(rayon);
+  }
+}
+
+genererRayons(0x1a2045);
 
 app.ticker.add((delta) => {
     conteneurRayon.rotation += 0.003 * delta;
 });
-
 let conteneurDisque = new PIXI.Container();
 conteneurDisque.x = centreX;
 conteneurDisque.y = centreY + 40;
