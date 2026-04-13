@@ -66,16 +66,16 @@
   "releases_url": "https://api.github.com/repos/pixijs/pixijs/releases{/id}",
   "deployments_url": "https://api.github.com/repos/pixijs/pixijs/deployments",
   "created_at": "2013-01-21T22:40:50Z",
-  "updated_at": "2026-04-06T07:09:57Z",
-  "pushed_at": "2026-04-02T13:36:26Z",
+  "updated_at": "2026-04-13T07:39:05Z",
+  "pushed_at": "2026-04-11T15:52:57Z",
   "git_url": "git://github.com/pixijs/pixijs.git",
   "ssh_url": "git@github.com:pixijs/pixijs.git",
   "clone_url": "https://github.com/pixijs/pixijs.git",
   "svn_url": "https://github.com/pixijs/pixijs",
   "homepage": "http://pixijs.com",
-  "size": 135497,
-  "stargazers_count": 46863,
-  "watchers_count": 46863,
+  "size": 136261,
+  "stargazers_count": 46919,
+  "watchers_count": 46919,
   "language": "TypeScript",
   "has_issues": true,
   "has_projects": true,
@@ -83,11 +83,11 @@
   "has_wiki": true,
   "has_pages": false,
   "has_discussions": true,
-  "forks_count": 4992,
+  "forks_count": 5003,
   "mirror_url": null,
   "archived": false,
   "disabled": false,
-  "open_issues_count": 327,
+  "open_issues_count": 330,
   "license": {
     "key": "mit",
     "name": "MIT License",
@@ -116,9 +116,9 @@
     "webgl"
   ],
   "visibility": "public",
-  "forks": 4992,
-  "open_issues": 327,
-  "watchers": 46863,
+  "forks": 5003,
+  "open_issues": 330,
+  "watchers": 46919,
   "default_branch": "dev",
   "temp_clone_token": null,
   "custom_properties": {
@@ -145,6 +145,6 @@
     "user_view_type": "public",
     "site_admin": false
   },
-  "network_count": 4992,
-  "subscribers_count": 975
+  "network_count": 5003,
+  "subscribers_count": 976
 }
