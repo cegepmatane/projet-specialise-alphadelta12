@@ -67,7 +67,7 @@
       "state": "uploaded",
       "size": 37768,
       "digest": "sha256:f456708f595f86f228fe3396905fbce8ea5076ae666cdcd611ee607515c36401",
-      "download_count": 16,
+      "download_count": 21,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/advanced-blend-modes.js"
@@ -139,7 +139,7 @@
       "state": "uploaded",
       "size": 31682,
       "digest": "sha256:d9852bb076c368a9e7fff3fa6519cbb00b347b5398523f03e6f712cffab95faa",
-      "download_count": 6,
+      "download_count": 9,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/advanced-blend-modes.min.js"
@@ -211,7 +211,7 @@
       "state": "uploaded",
       "size": 45367,
       "digest": "sha256:16768f91a73c6bcd73067ce2027c89a5561bd5ab88aa084e263806d7b19c6e89",
-      "download_count": 8,
+      "download_count": 9,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/gif.js"
@@ -247,7 +247,7 @@
       "state": "uploaded",
       "size": 88263,
       "digest": "sha256:7506b469ef77f9401d1a0337b586441bcd113257921ee9c7347833eb46479078",
-      "download_count": 8,
+      "download_count": 9,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/gif.js.map"
@@ -283,7 +283,7 @@
       "state": "uploaded",
       "size": 14930,
       "digest": "sha256:ee16df028cd1c8f84ca63e79291e60cae81e6efaf3ecd06d89cdadab753c6bb2",
-      "download_count": 6,
+      "download_count": 8,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/gif.min.js"
@@ -355,7 +355,7 @@
       "state": "uploaded",
       "size": 6794,
       "digest": "sha256:8520db1b1d287a11233b0fa0a15a3c53cd49bee633ecfd4b0cc0b1c5a7a4834f",
-      "download_count": 8,
+      "download_count": 9,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/math-extras.js"
@@ -499,7 +499,7 @@
       "state": "uploaded",
       "size": 2340107,
       "digest": "sha256:6959c9dd7fd877d59e282114cf25a5efb4e157b453823da70d0fe779891e21a7",
-      "download_count": 18,
+      "download_count": 33,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/pixi.js"
@@ -535,7 +535,7 @@
       "state": "uploaded",
       "size": 1613129,
       "digest": "sha256:68bfecb2dbcd20007d804100456abace2fb6210798e9b1d62d4503bce0e59898",
-      "download_count": 6,
+      "download_count": 7,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/pixi.js.d.ts"
@@ -571,7 +571,7 @@
       "state": "uploaded",
       "size": 5126175,
       "digest": "sha256:65cabae0982ae372792daf8a6561dc6feb3f0b84ca1fefaa437d4c55dbf15a4a",
-      "download_count": 10,
+      "download_count": 14,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/pixi.js.map"
@@ -607,7 +607,7 @@
       "state": "uploaded",
       "size": 796424,
       "digest": "sha256:abeeec74acab20e84c74d05d89e13965b9f3152ca958864cf49e5de5de6dd516",
-      "download_count": 25,
+      "download_count": 29,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/pixi.min.js"
@@ -643,7 +643,7 @@
       "state": "uploaded",
       "size": 4494623,
       "digest": "sha256:2f223bb1b51ac2b201707249f76af6daa9a4257bc1ad3283e93a00d426f239f2",
-      "download_count": 7,
+      "download_count": 10,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/pixi.min.js.map"
@@ -679,7 +679,7 @@
       "state": "uploaded",
       "size": 797066,
       "digest": "sha256:c1fb83a64b083f296008ab397eb429cd52e9fb2969f11812514a9aaf4642b732",
-      "download_count": 9,
+      "download_count": 10,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/pixi.min.mjs"
@@ -751,7 +751,7 @@
       "state": "uploaded",
       "size": 2083455,
       "digest": "sha256:738a911659412ef4cf576a1bbe168eb63fee2683b544972fda37039bf1b8ec61",
-      "download_count": 8,
+      "download_count": 9,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/pixi.mjs"
@@ -823,7 +823,7 @@
       "state": "uploaded",
       "size": 36134,
       "digest": "sha256:d655b180e8fc843feb9a10eff4d9e20d0f3ceb76e838c88516570ae5bdd15b11",
-      "download_count": 9,
+      "download_count": 10,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/unsafe-eval.js"
@@ -859,7 +859,7 @@
       "state": "uploaded",
       "size": 98968,
       "digest": "sha256:d6afc45df87ba0e1f123417dbbccdc6c99bb6690ac9e755b571ddeb4129aec64",
-      "download_count": 6,
+      "download_count": 7,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/unsafe-eval.js.map"
@@ -895,7 +895,7 @@
       "state": "uploaded",
       "size": 15712,
       "digest": "sha256:4bbae0dceca43ad8f2e456ee37d39f87f5afd71c5287e4abc2bc558cd373edd8",
-      "download_count": 7,
+      "download_count": 8,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/unsafe-eval.min.js"
@@ -967,7 +967,7 @@
       "state": "uploaded",
       "size": 2386159,
       "digest": "sha256:7b23c9150cfdad994223df0a751a9b69fb83c136bc4d88b6d9b5f7197ea36377",
-      "download_count": 9,
+      "download_count": 10,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/webworker.js"
@@ -1183,7 +1183,7 @@
       "state": "uploaded",
       "size": 2121552,
       "digest": "sha256:7dd61061b455bd9ef455e900a7f4770878baecbb13bdbd3feae41bf94848d730",
-      "download_count": 6,
+      "download_count": 7,
       "created_at": "2026-04-14T20:03:03Z",
       "updated_at": "2026-04-14T20:03:03Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.18.1/webworker.mjs"
