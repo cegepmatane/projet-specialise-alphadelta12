@@ -67,7 +67,7 @@
       "state": "uploaded",
       "size": 37768,
       "digest": "sha256:c1ed534496139af00461a06001eff3e536f4b44fe9c4ad5b0e9429a26fd2faf1",
-      "download_count": 5,
+      "download_count": 9,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/advanced-blend-modes.js"
@@ -103,7 +103,7 @@
       "state": "uploaded",
       "size": 67567,
       "digest": "sha256:a5591262ffb60888d37d7f95c751ef587644ad0c77f32a9a4252a787b4696de9",
-      "download_count": 9,
+      "download_count": 12,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/advanced-blend-modes.js.map"
@@ -139,7 +139,7 @@
       "state": "uploaded",
       "size": 31682,
       "digest": "sha256:a8df8d55631e972154b3733c400176491be70a85e30add65a385ae733e1bb4e6",
-      "download_count": 3,
+      "download_count": 6,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/advanced-blend-modes.min.js"
@@ -175,7 +175,7 @@
       "state": "uploaded",
       "size": 63716,
       "digest": "sha256:a140392e8ec7af411a44769abe2e916d9cf1de5af8ffb2c41d8e100883d4f0f3",
-      "download_count": 6,
+      "download_count": 9,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/advanced-blend-modes.min.js.map"
@@ -211,7 +211,7 @@
       "state": "uploaded",
       "size": 45367,
       "digest": "sha256:c391835795f42d31562feaed7eb61707a3104d7ae715c4710fc1f455b5658acc",
-      "download_count": 4,
+      "download_count": 7,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/gif.js"
@@ -247,7 +247,7 @@
       "state": "uploaded",
       "size": 88263,
       "digest": "sha256:7506b469ef77f9401d1a0337b586441bcd113257921ee9c7347833eb46479078",
-      "download_count": 5,
+      "download_count": 7,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/gif.js.map"
@@ -283,7 +283,7 @@
       "state": "uploaded",
       "size": 14930,
       "digest": "sha256:197d92a9404daa2b60a9b4d067fc8be737914a81e34de2645a192216db364c9f",
-      "download_count": 3,
+      "download_count": 7,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/gif.min.js"
@@ -319,7 +319,7 @@
       "state": "uploaded",
       "size": 71858,
       "digest": "sha256:5c164ee8b17a3f02afa72255352b23dfe265764576324d8146bedead7153db42",
-      "download_count": 5,
+      "download_count": 8,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/gif.min.js.map"
@@ -355,7 +355,7 @@
       "state": "uploaded",
       "size": 14431,
       "digest": "sha256:8b5b252571e8c276ef1123ef575a3259d488281d398a9ba1a72879ba8e810494",
-      "download_count": 3,
+      "download_count": 10,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/html-source.js"
@@ -391,7 +391,7 @@
       "state": "uploaded",
       "size": 37196,
       "digest": "sha256:9e22d6285d6deded2a5746f3284859d1df8155ea72f666864636cb158a6c30bc",
-      "download_count": 6,
+      "download_count": 9,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/html-source.js.map"
@@ -427,7 +427,7 @@
       "state": "uploaded",
       "size": 4608,
       "digest": "sha256:3926c0e69bd09fe95ce14a5a58d17df18ac8016a15a9952cc3b6473d36aa9af3",
-      "download_count": 3,
+      "download_count": 7,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/html-source.min.js"
@@ -463,7 +463,7 @@
       "state": "uploaded",
       "size": 33423,
       "digest": "sha256:11a8bd0c18e6fef82eaf5021d3b25de1eb79971719c886a8a5bf379df5569ad4",
-      "download_count": 3,
+      "download_count": 5,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/html-source.min.js.map"
@@ -499,7 +499,7 @@
       "state": "uploaded",
       "size": 6794,
       "digest": "sha256:ff3a6f96e0e14e8f60b66a87b5f80525abad279ffbdc6bce976ecda2986f4a95",
-      "download_count": 3,
+      "download_count": 8,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/math-extras.js"
@@ -535,7 +535,7 @@
       "state": "uploaded",
       "size": 20725,
       "digest": "sha256:bdd6155b36382b1fc809611aa66819e9d2f45bf5a1d412a8861242f54b2bbb99",
-      "download_count": 3,
+      "download_count": 5,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/math-extras.js.map"
@@ -571,7 +571,7 @@
       "state": "uploaded",
       "size": 2826,
       "digest": "sha256:03ba0a3a6ab28a334979051ae83c60c3bb65acfbaf52a0e18d14d7b4dbd7253e",
-      "download_count": 3,
+      "download_count": 7,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/math-extras.min.js"
@@ -607,7 +607,7 @@
       "state": "uploaded",
       "size": 15320,
       "digest": "sha256:49752f7d4cc1268c86a64d8f7f17a70c6358dbd26d82bb62294551baa193fc8e",
-      "download_count": 3,
+      "download_count": 5,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/math-extras.min.js.map"
@@ -643,7 +643,7 @@
       "state": "uploaded",
       "size": 2435192,
       "digest": "sha256:8469becea82047a67fb0af69e0c0bd8b6a4bc25ccec3e4adc427aa84f0dd24ca",
-      "download_count": 27,
+      "download_count": 41,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/pixi.js"
@@ -679,7 +679,7 @@
       "state": "uploaded",
       "size": 1676845,
       "digest": "sha256:c3e59d68d3b210e774c0667a1c3622744acf23da8783986a44a81088c3037224",
-      "download_count": 4,
+      "download_count": 7,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/pixi.js.d.ts"
@@ -715,7 +715,7 @@
       "state": "uploaded",
       "size": 5353003,
       "digest": "sha256:2f4eede8fb63aaf26c0e81d8131370815b2a21f8524b0edd62feb3392018b470",
-      "download_count": 4,
+      "download_count": 8,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:12Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/pixi.js.map"
@@ -751,7 +751,7 @@
       "state": "uploaded",
       "size": 828321,
       "digest": "sha256:c6d9d4c897b15576cce0055d0ba4382021181c99cdf08a446be9d61e16833db0",
-      "download_count": 9,
+      "download_count": 24,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/pixi.min.js"
@@ -787,7 +787,7 @@
       "state": "uploaded",
       "size": 4696192,
       "digest": "sha256:2f5db84145233301e1687d1a17d866b73bb9bd552bd360c794e9e22a7ca5b335",
-      "download_count": 3,
+      "download_count": 7,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/pixi.min.js.map"
@@ -823,7 +823,7 @@
       "state": "uploaded",
       "size": 828971,
       "digest": "sha256:2f69e90f5b1980e6ea244bacfb3fa1eb457e16ddcb0a602b694642658956f2ef",
-      "download_count": 4,
+      "download_count": 9,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/pixi.min.mjs"
@@ -859,7 +859,7 @@
       "state": "uploaded",
       "size": 4696546,
       "digest": "sha256:63638c9c9c3a961f72958715b8b4317a68479002a1b237b71dd8f0b6d5a3efc8",
-      "download_count": 3,
+      "download_count": 6,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:12Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/pixi.min.mjs.map"
@@ -895,7 +895,7 @@
       "state": "uploaded",
       "size": 2170677,
       "digest": "sha256:7f89820fe2beb4825c77f2b5c94455339f0eab34b616f6ec7f5f7b337e3dbcad",
-      "download_count": 3,
+      "download_count": 9,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/pixi.mjs"
@@ -931,7 +931,7 @@
       "state": "uploaded",
       "size": 5352270,
       "digest": "sha256:b24fa56b78d8dfc3991d24154dd6be438478dcc27630cd3ba086bb45cd110b63",
-      "download_count": 4,
+      "download_count": 6,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:12Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/pixi.mjs.map"
@@ -967,7 +967,7 @@
       "state": "uploaded",
       "size": 36187,
       "digest": "sha256:5e25a83e8484476b573169c495fb4e1c5c1ae94333a4438cf204fae44644f0ee",
-      "download_count": 3,
+      "download_count": 6,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/unsafe-eval.js"
@@ -1003,7 +1003,7 @@
       "state": "uploaded",
       "size": 99161,
       "digest": "sha256:cc60048c728bc49b41edabe293a7f26cb3c8dce3d5fbed0fbd7b4140776e4a09",
-      "download_count": 3,
+      "download_count": 5,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/unsafe-eval.js.map"
@@ -1039,7 +1039,7 @@
       "state": "uploaded",
       "size": 15745,
       "digest": "sha256:95b16558c615575f08d6b9e2b518b0edc4d446673b3307d967e2e59fab0464cd",
-      "download_count": 4,
+      "download_count": 7,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/unsafe-eval.min.js"
@@ -1075,7 +1075,7 @@
       "state": "uploaded",
       "size": 80481,
       "digest": "sha256:c33e5dee3c37a413e16dc6effb9532be885ed74c926e33d7806685745c64c999",
-      "download_count": 3,
+      "download_count": 5,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/unsafe-eval.min.js.map"
@@ -1111,7 +1111,7 @@
       "state": "uploaded",
       "size": 2504290,
       "digest": "sha256:3cb4ecce5a249c4f948e1b1615ff509f75048657a57e1ce199b6d023d6321179",
-      "download_count": 3,
+      "download_count": 7,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:12Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/webworker.js"
@@ -1147,7 +1147,7 @@
       "state": "uploaded",
       "size": 5350637,
       "digest": "sha256:392a31617d54f46ea942ee9c75a1daceef09490152a1f4294d2ed88ae24163a3",
-      "download_count": 3,
+      "download_count": 5,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:12Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/webworker.js.map"
@@ -1183,7 +1183,7 @@
       "state": "uploaded",
       "size": 856167,
       "digest": "sha256:75ab86f753e2901b2fd7772491c3dae3f392498073bdbd147e4f75eb51ef7ef9",
-      "download_count": 3,
+      "download_count": 5,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/webworker.min.js"
@@ -1219,7 +1219,7 @@
       "state": "uploaded",
       "size": 4678562,
       "digest": "sha256:1b1d97900dfd6204c33887c5c22797dd0e66c8e1bf45a7149d0a235b25539efa",
-      "download_count": 3,
+      "download_count": 5,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/webworker.min.js.map"
@@ -1255,7 +1255,7 @@
       "state": "uploaded",
       "size": 856800,
       "digest": "sha256:cc4f8b34d85884705186b4a705d9d36ba4eef4bcdff4e6c75f13faaf19fb848d",
-      "download_count": 3,
+      "download_count": 5,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/webworker.min.mjs"
@@ -1291,7 +1291,7 @@
       "state": "uploaded",
       "size": 4678900,
       "digest": "sha256:43de2a07d56635a4319d73dd804fb9c9e9a8a2fc825465e599c16f2aff3bd353",
-      "download_count": 3,
+      "download_count": 5,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:11Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/webworker.min.mjs.map"
@@ -1327,7 +1327,7 @@
       "state": "uploaded",
       "size": 2230324,
       "digest": "sha256:5e80903d44a67b4811a7f86a36536d16112e8c39c873194c0ca87343b094a7b0",
-      "download_count": 3,
+      "download_count": 5,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:12Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/webworker.mjs"
@@ -1363,7 +1363,7 @@
       "state": "uploaded",
       "size": 5349913,
       "digest": "sha256:8b3eb872baccb5e00427d4967d00ab6cfce8db4d3f97b0f8b68d7eb4d1e128ed",
-      "download_count": 3,
+      "download_count": 5,
       "created_at": "2026-09-17T07:43:11Z",
       "updated_at": "2026-09-17T07:43:12Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.21.0/webworker.mjs.map"
@@ -1374,13 +1374,13 @@
   "body": "## 💾 Download\r\n\r\nInstallation:\r\n```bash\r\nnpm install pixi.js@8.21.0\r\n```\r\n\r\nDevelopment Build:\r\n- https://cdn.jsdelivr.net/npm/pixi.js@8.21.0/dist/pixi.js\r\n- https://cdn.jsdelivr.net/npm/pixi.js@8.21.0/dist/pixi.mjs\r\n\r\nProduction Build:\r\n- https://cdn.jsdelivr.net/npm/pixi.js@8.21.0/dist/pixi.min.js\r\n- https://cdn.jsdelivr.net/npm/pixi.js@8.21.0/dist/pixi.min.mjs\r\n\r\nDocumentation:\r\n- https://pixijs.download/v8.21.0/docs/index.html\r\n\r\n## Changed\r\nhttps://github.com/pixijs/pixijs/compare/v8.20.1...v8.21.0\r\n\r\n### 🚨 Behavior Change\r\n* fix: decompose mirrored matrix into rotation and negative scale by @cpruijsen in https://github.com/pixijs/pixijs/pull/12200\r\n  * `Matrix.decompose()` and `setFromMatrix()` (plus `reparentChild()`, `reparentChildAt()` and `replaceChild()`) now turn a mirrored matrix into a real `rotation`, zero `skew` and a negative `scale.x`. Previously they returned `rotation = 0` with a nonzero `skew`. Rendering is identical; only the values you read back change. The flip always lands on `scale.x`, so a `scale(1, -1)` matrix now gives `scale (-1, 1)` with `rotation = -π`. Re-check any flip detection or tweens that start from decomposed values.\r\n  ```ts\r\n  import { Container, Matrix } from 'pixi.js';\r\n\r\n  const container = new Container();\r\n\r\n  container.setFromMatrix(new Matrix().rotate(Math.PI / 6).scale(-1, 1));\r\n\r\n  // before: rotation 0, skew { x: ~0.524, y: ~2.618 }, scale { x: 1, y: 1 }\r\n  // after:  rotation ~-0.524, skew { x: 0, y: 0 }, scale { x: -1, y: 1 }\r\n  ```\r\n\r\n### 🎁 Added\r\n* feat: support TypeScript 5, 6, and 7 by @creativoma @Zyie in https://github.com/pixijs/pixijs/pull/12157\r\n  * PixiJS types now compile on TypeScript 6 and 7 as well as 5. TypeScript 5 needs no changes; PixiJS still adds `@webgpu/types` for you. On TypeScript 6 and 7, which include WebGPU types built in, remove `@webgpu/types` from `compilerOptions.types` and use `@types/web` in place of the `\"dom\"` lib, since some releases leave out parts such as `GPUTextureUsage`. See the new [TypeScript guide](https://pixijs.com/8.x/guides/concepts/typescript).\r\n  ```bash\r\n  npm install --save-dev @types/web\r\n  ```\r\n  ```json\r\n  {\r\n    \"compilerOptions\": {\r\n      \"lib\": [\"esnext\"],\r\n      \"types\": [\"@types/web\"]\r\n    }\r\n  }\r\n  ```\r\n* feat: add renderer loader extensions for lazy backend imports by @Zyie in https://github.com/pixijs/pixijs/pull/12175\r\n  * New `ExtensionType.WebGLLoader`, `ExtensionType.WebGPULoader` and `ExtensionType.CanvasLoader` extensions register an async `load()` hook that the matching renderer awaits during `init()`, before it creates its systems and pipes. Plugins can `import()` backend-only code this way, so each backend stays in its own chunk and only the active one loads. Loaders are deduplicated by `name` and are skipped when `skipExtensionImports` is `true`.\r\n  ```ts\r\n  import { Application, extensions, ExtensionType } from 'pixi.js';\r\n\r\n  extensions.add(\r\n      {\r\n          extension: { type: ExtensionType.WebGLLoader, name: 'my-plugin' },\r\n          load: () => import('./gl/register'),\r\n      },\r\n      {\r\n          extension: { type: ExtensionType.WebGPULoader, name: 'my-plugin' },\r\n          load: () => import('./gpu/register'),\r\n      },\r\n  );\r\n\r\n  const app = new Application();\r\n  await app.init({ preference: 'webgpu' }); // only the WebGPU loader runs\r\n  ```\r\n* feat: add Geometry.indexCount for drawing a prefix of a shared index buffer by @GoodBoyDigital in https://github.com/pixijs/pixijs/pull/12182\r\n  * `Geometry` gains an `indexCount` property (also a constructor option), the index-buffer counterpart to `instanceCount`. Several geometries can share one index buffer while each draws only its first N indices. Changing it never re-uploads anything. The default `0` draws the whole buffer, and an explicit `size` on the draw call still takes precedence.\r\n  ```ts\r\n  import { Buffer, BufferUsage, Geometry } from 'pixi.js';\r\n\r\n  const maxQuads = 1000;\r\n  const indices = new Uint32Array(maxQuads * 6);\r\n\r\n  for (let i = 0, v = 0; i < indices.length; i += 6, v += 4)\r\n  {\r\n      indices.set([v, v + 1, v + 2, v, v + 2, v + 3], i);\r\n  }\r\n\r\n  const sharedIndices = new Buffer({ data: indices, usage: BufferUsage.INDEX | BufferUsage.COPY_DST });\r\n\r\n  const geometry = new Geometry({\r\n      attributes: { aPosition: new Float32Array(maxQuads * 8) },\r\n      indexBuffer: sharedIndices,\r\n      indexCount: 10 * 6, // draw only the first 10 quads\r\n  });\r\n\r\n  geometry.indexCount = 25 * 6; // grow later without a re-upload\r\n  ```\r\n* feat: replace frontFaceInverted with isFrontFaceInverted(target, flipY) by @GoodBoyDigital in https://github.com/pixijs/pixijs/pull/12206\r\n  * `renderer.renderTarget.isFrontFaceInverted()` replaces the `frontFaceInverted` getter, which is now deprecated. Pass a target and `flipY` to get the winding for a target before you bind it, so 3D pipelines can pick a projection first. `flipY` defaults to `false`, matching `bind()`.\r\n  ```ts\r\n  import { RenderTexture } from 'pixi.js';\r\n\r\n  // before (deprecated)\r\n  const invertedNow = renderer.renderTarget.frontFaceInverted;\r\n\r\n  // after: the currently bound target\r\n  const inverted = renderer.renderTarget.isFrontFaceInverted();\r\n\r\n  // after: a target that isn't bound yet, as if bound with flipY: true\r\n  const target = renderer.renderTarget.getRenderTarget(RenderTexture.create({ width: 512, height: 512 }));\r\n  const willInvert = renderer.renderTarget.isFrontFaceInverted(target, true);\r\n  ```\r\n* feat: cap pooled textures to the screen size and take pool requests as options by @GoodBoyDigital in https://github.com/pixijs/pixijs/pull/12198\r\n  * `TexturePool` and `CanvasPool` now size pooled textures to the screen instead of always rounding up to a power of two, which saves a lot of GPU memory on fullscreen filters (a 1170x2532 phone used to get 2048x4096 textures). Requests larger than every screen still round up to a power of two. `getOptimalTexture()` and `createTexture()` now take a `TexturePoolRequest` object with per-request `format` and `scaleMode`; the positional signatures still work but are deprecated.\r\n  ```ts\r\n  import { TexturePool } from 'pixi.js';\r\n\r\n  // before (deprecated)\r\n  const legacy = TexturePool.getOptimalTexture(800, 600, 2, true);\r\n\r\n  // after\r\n  const texture = TexturePool.getOptimalTexture({\r\n      width: 800,\r\n      height: 600,\r\n      resolution: 2,\r\n      antialias: true,\r\n      scaleMode: 'nearest',\r\n  });\r\n\r\n  TexturePool.returnTexture(texture);\r\n  ```\r\n* feat: stamp render bundles with baked pipeline state by @GoodBoyDigital in https://github.com/pixijs/pixijs/pull/12158\r\n\r\n### 🐛 Fixed\r\n* fix: restore the WebGPU renderer after a device loss by @Zyie in https://github.com/pixijs/pixijs/pull/12173\r\n* fix: release cached GPU render targets on RenderTarget destroy by @Zyie in https://github.com/pixijs/pixijs/pull/12192\r\n* fix: preserve UBO offsets in unsafe-eval polyfill by @darkdi in https://github.com/pixijs/pixijs/pull/12154\r\n* fix: svg radial gradients render as a linear gradient by @creativoma in https://github.com/pixijs/pixijs/pull/12156\r\n* fix: detach from shared TextStyle on destroy (#12049) by @qiao-coding in https://github.com/pixijs/pixijs/pull/12159\r\n* fix: regenerate Text/HTMLText textures after WebGL context loss by @Zyie in https://github.com/pixijs/pixijs/pull/12170\r\n* fix: render Text, HTMLText and Graphics with a second renderer by @Zyie in https://github.com/pixijs/pixijs/pull/12172\r\n* fix: BatcherPipe leak on RenderGroup destroy by @laino in https://github.com/pixijs/pixijs/pull/12030\r\n* fix: release VAOs and buffer listeners when a Geometry is destroyed by @Zyie in https://github.com/pixijs/pixijs/pull/12190\r\n* fix: make the GC resource sweep safe under re-entrant unload listeners by @Zyie in https://github.com/pixijs/pixijs/pull/12191\r\n* fix: sweep idle WebGPU bind groups with the renderer GC by @Zyie in https://github.com/pixijs/pixijs/pull/12193\r\n* fix: keep per-target stencil state on the backend render target by @Zyie in https://github.com/pixijs/pixijs/pull/12194\r\n* fix: clamp blur samples to the input frame by @ICOM725 in https://github.com/pixijs/pixijs/pull/12188\r\n* fix: don't inherit autoGenerateMipmaps on WebGPU MSAA textures by @zenblender in https://github.com/pixijs/pixijs/pull/12197\r\n* fix: render nine-slice center in canvas when borders cover the texture by @ShiKirill in https://github.com/pixijs/pixijs/pull/12126\r\n* fix: handle strokes wider than the shape in Ellipse.strokeContains by @MaxFreedomPollard in https://github.com/pixijs/pixijs/pull/12185\r\n* fix: preserve translucent colors in untinted canvas tiling sprites by @ICOM725 in https://github.com/pixijs/pixijs/pull/12189\r\n* fix: ignore inactive graphics batches when creating bind groups by @iketiunn in https://github.com/pixijs/pixijs/pull/12184\r\n* fix: don't destroy the shared GpuProgram on WebGPU renderer destroy by @Zyie in https://github.com/pixijs/pixijs/pull/12203\r\n* fix: update the WebGPU front face when a reused pass changes flipY by @Zyie in https://github.com/pixijs/pixijs/pull/12207\r\n\r\n### 🧹 Chores\r\n* chore: bump @xmldom/xmldom to 0.8.15 by @Zyie in https://github.com/pixijs/pixijs/pull/12162\r\n* chore: remove write-only _touched field from BindResource and implementors by @santichausis in https://github.com/pixijs/pixijs/pull/12199\r\n* chore: update Assets texture-loading examples for v8 by @Hugohong258 in https://github.com/pixijs/pixijs/pull/12196\r\n* chore: fix Shader uniform resource example by @Hugohong258 in https://github.com/pixijs/pixijs/pull/12202\r\n* chore: update docs and skills for v8.20+ changes by @Zyie in https://github.com/pixijs/pixijs/pull/12204\r\n\r\n## New Contributors\r\n* @darkdi made their first contribution in https://github.com/pixijs/pixijs/pull/12154\r\n* @qiao-coding made their first contribution in https://github.com/pixijs/pixijs/pull/12159\r\n* @cpruijsen made their first contribution in https://github.com/pixijs/pixijs/pull/12200\r\n* @ICOM725 made their first contribution in https://github.com/pixijs/pixijs/pull/12188\r\n* @Hugohong258 made their first contribution in https://github.com/pixijs/pixijs/pull/12196\r\n* @zenblender made their first contribution in https://github.com/pixijs/pixijs/pull/12197\r\n* @MaxFreedomPollard made their first contribution in https://github.com/pixijs/pixijs/pull/12185\r\n* @iketiunn made their first contribution in https://github.com/pixijs/pixijs/pull/12184",
   "reactions": {
     "url": "https://api.github.com/repos/pixijs/pixijs/releases/390516692/reactions",
-    "total_count": 14,
-    "+1": 2,
+    "total_count": 16,
+    "+1": 3,
     "-1": 0,
     "laugh": 0,
     "hooray": 3,
     "confused": 0,
-    "heart": 4,
+    "heart": 5,
     "rocket": 5,
     "eyes": 0
   },
