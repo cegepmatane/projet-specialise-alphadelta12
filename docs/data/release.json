@@ -67,7 +67,7 @@
       "state": "uploaded",
       "size": 37768,
       "digest": "sha256:a15dd33b511842aa8d1ce4d21d11efb2751fe90adcdfea7d78333886bb997819",
-      "download_count": 24,
+      "download_count": 34,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/advanced-blend-modes.js"
@@ -103,7 +103,7 @@
       "state": "uploaded",
       "size": 67567,
       "digest": "sha256:a5591262ffb60888d37d7f95c751ef587644ad0c77f32a9a4252a787b4696de9",
-      "download_count": 21,
+      "download_count": 25,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/advanced-blend-modes.js.map"
@@ -139,7 +139,7 @@
       "state": "uploaded",
       "size": 31682,
       "digest": "sha256:18c73fc95ca2a113026d85c7b8d91397d939a2d47d48a8083889b18fb73352fc",
-      "download_count": 21,
+      "download_count": 32,
       "created_at": "2026-10-01T21:50:27Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/advanced-blend-modes.min.js"
@@ -175,7 +175,7 @@
       "state": "uploaded",
       "size": 63716,
       "digest": "sha256:a140392e8ec7af411a44769abe2e916d9cf1de5af8ffb2c41d8e100883d4f0f3",
-      "download_count": 21,
+      "download_count": 29,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/advanced-blend-modes.min.js.map"
@@ -211,7 +211,7 @@
       "state": "uploaded",
       "size": 45367,
       "digest": "sha256:d0ee8ae69c6e60a060aa60e17d0329629b1a64c9f6a6b0b12ef85005922c3fae",
-      "download_count": 19,
+      "download_count": 21,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/gif.js"
@@ -247,7 +247,7 @@
       "state": "uploaded",
       "size": 88263,
       "digest": "sha256:7506b469ef77f9401d1a0337b586441bcd113257921ee9c7347833eb46479078",
-      "download_count": 18,
+      "download_count": 22,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/gif.js.map"
@@ -283,7 +283,7 @@
       "state": "uploaded",
       "size": 14930,
       "digest": "sha256:9a0f89c376c31205694efbf9c02eace7aeb97c504419ad6d839f92ef66b04239",
-      "download_count": 21,
+      "download_count": 25,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/gif.min.js"
@@ -319,7 +319,7 @@
       "state": "uploaded",
       "size": 71858,
       "digest": "sha256:5c164ee8b17a3f02afa72255352b23dfe265764576324d8146bedead7153db42",
-      "download_count": 16,
+      "download_count": 18,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/gif.min.js.map"
@@ -355,7 +355,7 @@
       "state": "uploaded",
       "size": 14431,
       "digest": "sha256:08d1138d1f4cdb1ac065039aadf5700de4d43d694f70d6e8b8c1c4a400e64462",
-      "download_count": 21,
+      "download_count": 23,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/html-source.js"
@@ -391,7 +391,7 @@
       "state": "uploaded",
       "size": 37196,
       "digest": "sha256:9e22d6285d6deded2a5746f3284859d1df8155ea72f666864636cb158a6c30bc",
-      "download_count": 19,
+      "download_count": 22,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/html-source.js.map"
@@ -427,7 +427,7 @@
       "state": "uploaded",
       "size": 4608,
       "digest": "sha256:02399b3a8608f92e4454e5a43d35420918958774a723f2832de7c583b9204fb3",
-      "download_count": 16,
+      "download_count": 19,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/html-source.min.js"
@@ -463,7 +463,7 @@
       "state": "uploaded",
       "size": 33423,
       "digest": "sha256:11a8bd0c18e6fef82eaf5021d3b25de1eb79971719c886a8a5bf379df5569ad4",
-      "download_count": 14,
+      "download_count": 16,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/html-source.min.js.map"
@@ -499,7 +499,7 @@
       "state": "uploaded",
       "size": 6794,
       "digest": "sha256:fa92de55d6bea930e742d91ea20aa8c1a99f13481aa5eda7476c8814469a04a1",
-      "download_count": 18,
+      "download_count": 20,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/math-extras.js"
@@ -535,7 +535,7 @@
       "state": "uploaded",
       "size": 20725,
       "digest": "sha256:bdd6155b36382b1fc809611aa66819e9d2f45bf5a1d412a8861242f54b2bbb99",
-      "download_count": 12,
+      "download_count": 15,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/math-extras.js.map"
@@ -571,7 +571,7 @@
       "state": "uploaded",
       "size": 2826,
       "digest": "sha256:346a8523084baad1e6d3fe177687cbd46c9b44b8422fbf13cb5a31d0fd53da38",
-      "download_count": 18,
+      "download_count": 21,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/math-extras.min.js"
@@ -607,7 +607,7 @@
       "state": "uploaded",
       "size": 15320,
       "digest": "sha256:49752f7d4cc1268c86a64d8f7f17a70c6358dbd26d82bb62294551baa193fc8e",
-      "download_count": 12,
+      "download_count": 14,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/math-extras.min.js.map"
@@ -643,7 +643,7 @@
       "state": "uploaded",
       "size": 2467375,
       "digest": "sha256:27bcdad5c17f86a95832670a27242a250f98b093231538e3c6f66dc20ff5de49",
-      "download_count": 169,
+      "download_count": 229,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/pixi.js"
@@ -679,7 +679,7 @@
       "state": "uploaded",
       "size": 1700533,
       "digest": "sha256:68690cc14ca96869a17cf5f6c55cfb9fff46512b1ae87d6726a53c6aa4c2c305",
-      "download_count": 117,
+      "download_count": 155,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/pixi.js.d.ts"
@@ -715,7 +715,7 @@
       "state": "uploaded",
       "size": 5426650,
       "digest": "sha256:212148d925e477e6b907b2eda7f5bbec1b3fbb074d716fa9b6662cc6adee84c5",
-      "download_count": 156,
+      "download_count": 202,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/pixi.js.map"
@@ -751,7 +751,7 @@
       "state": "uploaded",
       "size": 840663,
       "digest": "sha256:06d9ef9823e743518793083c296d801e752db128cb1f519fbabe37e1259567ea",
-      "download_count": 186,
+      "download_count": 250,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/pixi.min.js"
@@ -787,7 +787,7 @@
       "state": "uploaded",
       "size": 4762053,
       "digest": "sha256:bd0363c22680999142123fce3402ffae6c6be150693157c371ea510eb5d26258",
-      "download_count": 147,
+      "download_count": 196,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/pixi.min.js.map"
@@ -823,7 +823,7 @@
       "state": "uploaded",
       "size": 841319,
       "digest": "sha256:66257bc46776898bf8c54daaed402ed8f9ac109379c47b2dfa8aa048544d2953",
-      "download_count": 130,
+      "download_count": 189,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/pixi.min.mjs"
@@ -859,7 +859,7 @@
       "state": "uploaded",
       "size": 4762428,
       "digest": "sha256:71aaa2ddb9c2daa723ccda8e6b6b0cfdcbb5cf27c0f4951aad8d94ec5491fdd0",
-      "download_count": 148,
+      "download_count": 196,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/pixi.min.mjs.map"
@@ -895,7 +895,7 @@
       "state": "uploaded",
       "size": 2200191,
       "digest": "sha256:8c7c745f667a9b352574044d6ce8d8e76705a6932c79b6bcb53db34a5e22ea76",
-      "download_count": 169,
+      "download_count": 223,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/pixi.mjs"
@@ -931,7 +931,7 @@
       "state": "uploaded",
       "size": 5425911,
       "digest": "sha256:4c5ff08b7c534d697f5f228d587c8b090b3c5ccf6996ecb34a613549f95cb6cb",
-      "download_count": 16,
+      "download_count": 19,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/pixi.mjs.map"
@@ -967,7 +967,7 @@
       "state": "uploaded",
       "size": 36190,
       "digest": "sha256:e5080621b200fa6b398e3e7dd1a22a245395aa314a0fa5fc5c60b06b5548c85d",
-      "download_count": 19,
+      "download_count": 25,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/unsafe-eval.js"
@@ -1003,7 +1003,7 @@
       "state": "uploaded",
       "size": 99174,
       "digest": "sha256:a0326af27feed52b90ad4445b66a8cd1e857eafdab8e3317f7946bbdda617fcd",
-      "download_count": 13,
+      "download_count": 16,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/unsafe-eval.js.map"
@@ -1039,7 +1039,7 @@
       "state": "uploaded",
       "size": 15751,
       "digest": "sha256:80d5eabed0e1286e2f646b272687170d9211ecd1c901b3382c2d5274ba2c42a9",
-      "download_count": 23,
+      "download_count": 29,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/unsafe-eval.min.js"
@@ -1075,7 +1075,7 @@
       "state": "uploaded",
       "size": 80593,
       "digest": "sha256:2fc26b20bb83d7093d41a819f2270e4c657aebd2a0fe3ef1418a848372310543",
-      "download_count": 13,
+      "download_count": 16,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/unsafe-eval.min.js.map"
@@ -1111,7 +1111,7 @@
       "state": "uploaded",
       "size": 2534718,
       "digest": "sha256:1838ea3928843858d007d10756be0d5352d2d4000628924ae0d8d2a7756d6224",
-      "download_count": 21,
+      "download_count": 23,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/webworker.js"
@@ -1147,7 +1147,7 @@
       "state": "uploaded",
       "size": 5419648,
       "digest": "sha256:7b47c8d05d4c771e30d51d25c5aa0934442ed5e0f069bc88256f4b24014c9f39",
-      "download_count": 15,
+      "download_count": 18,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/webworker.js.map"
@@ -1183,7 +1183,7 @@
       "state": "uploaded",
       "size": 867735,
       "digest": "sha256:e2508e4a71c20c72dc4ec78a34bd916eb69b1e7e7ab2d9a4d9ed2d729d6eab94",
-      "download_count": 17,
+      "download_count": 21,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/webworker.min.js"
@@ -1219,7 +1219,7 @@
       "state": "uploaded",
       "size": 4740455,
       "digest": "sha256:4cd94be7c966712ebb90a1cd46600ba52271ee7c1c482c4273b2ed08dfaa056d",
-      "download_count": 18,
+      "download_count": 20,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/webworker.min.js.map"
@@ -1255,7 +1255,7 @@
       "state": "uploaded",
       "size": 868374,
       "digest": "sha256:0380fc21425eef323b3ed73835ba5067b98802512ddb3a0f3fd685c40cd88ea6",
-      "download_count": 15,
+      "download_count": 20,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/webworker.min.mjs"
@@ -1291,7 +1291,7 @@
       "state": "uploaded",
       "size": 4741008,
       "digest": "sha256:5ac919e06d3419505409a3b57e6314593263ed794c6fc2cdafdfd2d6bae9b4a2",
-      "download_count": 16,
+      "download_count": 18,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/webworker.min.mjs.map"
@@ -1327,7 +1327,7 @@
       "state": "uploaded",
       "size": 2258231,
       "digest": "sha256:fc67d73585140131c1c7929f6219c71b909e76601c5f89d095124a6e031561d3",
-      "download_count": 18,
+      "download_count": 20,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/webworker.mjs"
@@ -1363,7 +1363,7 @@
       "state": "uploaded",
       "size": 5418918,
       "digest": "sha256:9a5ce1a2ab17aa5ffcb6222711e923bc9462f5d42718feb2c323078270a02ecf",
-      "download_count": 15,
+      "download_count": 17,
       "created_at": "2026-10-01T21:50:26Z",
       "updated_at": "2026-10-01T21:50:27Z",
       "browser_download_url": "https://github.com/pixijs/pixijs/releases/download/v8.22.0/webworker.mjs.map"
